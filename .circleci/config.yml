@@ -88,8 +88,8 @@ jobs:
       - image: circleci/python:3.6.3
     
     environment:
-      S3_BUCKET_NAME: <YOUR BUCKET>-staging
-      CLOUD_FRONT_DIST_ID: <YOUR STAGING CLOUDFRONT ID>
+      S3_BUCKET_NAME: distributedsoup.com-staging
+      CLOUDFRONT_DIST_ID: ${STAGING_CLOUDFRONT_DIST_ID}
     
     steps:
       - attach_workspace:
@@ -107,8 +107,8 @@ jobs:
       - image: circleci/python:3.6.3
     
     environment:
-      S3_BUCKET_NAME: <YOUR BUCKET>--prod
-      CLOUD_FRONT_DIST_ID: <YOUR PROD CLOUDFRONT ID>
+      S3_BUCKET_NAME: distributedsoup.com
+      CLOUDFRONT_DIST_ID: ${PRODUCTION_CLOUDFRONT_DIST_ID}
     
     steps:
       - attach_workspace:
