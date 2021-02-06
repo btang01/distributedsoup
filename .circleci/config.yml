@@ -22,7 +22,7 @@ references:
       name: Upload to S3
       command: |
         echo "Copying files to server..."
-        aws s3 sync _site/ "s3://$S3_BUCKET_NAME" --size-only --exclude "*" --include "*.*" -- delete
+        aws s3 sync _site/ "s3://$S3_BUCKET_NAME" --size-only --exclude "*" --include "*.*" --delete
 
         echo "Copying files with content type..."
         aws s3 sync _site/ "s3://$S3_BUCKET_NAME" --size-only --content-type text/html --exclude "*.*"
