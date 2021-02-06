@@ -38,78 +38,59 @@ jobs:
     <<: *defaults
     docker:
       - image: circleci/ruby:2.6.0-node
-
     environment:
       BUNDLE_PATH: ~/repo/vendor/bundle
-    
     steps:
       - checkout
-
       - restore_cache:
           keys:
             - rubygems-v1-{{ checksum "Gemfile.lock" }}
-            - rubygems-v1-fallback
-      
+            - rubygems-v1-fallback  
       - run:
           name: Bundle Install 
           command: |
             echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> $BASH_ENV
             source $BASH_ENV
-            gem install bundler
-      
+            gem install bundler  
       - run:
           name: Bundle Install
           command: bundle check || bundle install
-
       - save_cache:
           key: rubygems-v1-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
-      
       - run:
           name: Jekyll build
           command: JEKYLL_ENV=production bundle exec jekyll build
-      
       - run:
           name: Remove .html extension
           command: find _site/ -type f ! -iname 'index.html' -iname '*.html' -print0 | while read -d $'\0' f; do mv "$f" "${f%.html}"; done
           permalink: /:categories/:year/:month/:day/:title
-
       - persist_to_workspace:
           root: ./
           paths:
             - _site 
-
-  
   deploy_staging:
     <<: *defaults
-
     docker:
       - image: circleci/python:3.6.3
-    
     environment:
       S3_BUCKET_NAME: distributedsoup.com-staging
       CLOUDFRONT_DIST_ID: ${STAGING_CLOUDFRONT_DIST_ID}
-    
     steps:
       - attach_workspace:
           at: ./
       - *install_awscli
       - *add_aws_credentials
       - *deploy_to_s3
-      - *clear_cloudfront_cache
-  
-  
+      - *clear_cloudfront_cache 
   deploy_production:
     <<: *defaults
-    
     docker:
       - image: circleci/python:3.6.3
-    
     environment:
       S3_BUCKET_NAME: distributedsoup.com
       CLOUDFRONT_DIST_ID: ${PRODUCTION_CLOUDFRONT_DIST_ID}
-    
     steps:
       - attach_workspace:
           at: ./
@@ -129,12 +110,10 @@ workflows:
           filters:
             branches:
               only: master
-      
       - confirm_deploy:
           type: approval
           requires:
             - deploy_staging
-      
       - deploy_production:
           requires:
             - confirm_deploy
