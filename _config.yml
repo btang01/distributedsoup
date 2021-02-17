@@ -39,8 +39,8 @@ plugins:
 header_pages:
   - portfolio.md
 
-#disqus:
-#  shortname: my_disqus_shortname
+disqus:
+  shortname: my_disqus_shortname
 
 #google_analytics: SOMETHING_SOMETHING
 
