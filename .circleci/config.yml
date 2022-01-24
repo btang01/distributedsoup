@@ -75,7 +75,7 @@ jobs:
     docker:
       - image: circleci/python:3.6.3
     environment:
-      S3_BUCKET_NAME: distributedsoup.com-staging
+      S3_BUCKET_NAME: distributedsoup.com-test
       CLOUDFRONT_DIST_ID: E3NZBBFWS403NG
     steps:
       - attach_workspace:
@@ -104,7 +104,7 @@ workflows:
   test-deploy:
     jobs:
       - build
-      - deploy_staging:
+      - deploy_test:
           requires:
             - build
           filters:
@@ -113,7 +113,7 @@ workflows:
       - confirm_deploy:
           type: approval
           requires:
-            - deploy_staging
+            - deploy_test
       - deploy_production:
           requires:
             - confirm_deploy
