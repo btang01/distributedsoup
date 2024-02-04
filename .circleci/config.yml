@@ -113,7 +113,8 @@ workflows:
       - confirm_deploy:
           type: approval
           requires:
-            - deploy_test
+            #- deploy_test
+            - build
       - deploy_production:
           requires:
             - confirm_deploy
