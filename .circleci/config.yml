@@ -104,12 +104,12 @@ workflows:
   test-deploy:
     jobs:
       - build
-      - deploy_test:
-          requires:
-            - build
-          filters:
-            branches:
-              only: master
+      #- deploy_test:
+      #    requires:
+       #     - build
+        #  filters:
+         #   branches:
+          #    only: master
       - confirm_deploy:
           type: approval
           requires:
