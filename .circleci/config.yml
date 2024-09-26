@@ -1,45 +1,137 @@
-# Use the latest 2.1 version of CircleCI pipeline process engine.
-# See: https://circleci.com/docs/configuration-reference
+defaults: &defaults
+  working_directory: ~/repo
+version: 2
 
-# For a detailed guide to building and testing with Python, read the docs:
-# https://circleci.com/docs/language-python/ for more details
-version: 2.1
+references:
+  
+  install_awscli: &install_awscli
+    run:
+      name: Install AWS CLI
+      command: |
+        sudo pip install awscli --upgrade
+  
+  add_aws_credentials: &add_aws_credentials
+    run:
+      name: Set AWS Credentials
+      command: |
+        aws configure set aws_access_key_id ${AWS_ACCESS_KEY_ID}
+        aws configure set aws_secret_access_key ${AWS_SECRET_ACCESS_KEY}
+  
+  deploy_to_s3: &deploy_to_s3
+    run:
+      name: Upload to S3
+      command: |
+        echo "Copying files to server..."
+        aws s3 sync _site/ "s3://$S3_BUCKET_NAME" --size-only --exclude "*" --include "*.*" --delete
 
-# Orbs are reusable packages of CircleCI configuration that you may share across projects, enabling you to create encapsulated, parameterized commands, jobs, and executors that can be used across multiple projects.
-# See: https://circleci.com/docs/orb-intro/
-orbs:
-  # See the Python orb documentation here: https://circleci.com/developer/orbs/orb/circleci/python
-  python: circleci/python@2.1.1
+        echo "Copying files with content type..."
+        aws s3 sync _site/ "s3://$S3_BUCKET_NAME" --size-only --content-type text/html --exclude "*.*"
 
-# Define a job to be invoked later in a workflow.
-# See: https://circleci.com/docs/jobs-steps/#jobs-overview & https://circleci.com/docs/configuration-reference/#jobs
+  clear_cloudfront_cache: &clear_cloudfront_cache
+    run:
+      name: Clear CloudFront Cache
+      command: |
+        aws cloudfront create-invalidation --distribution-id "$CLOUDFRONT_DIST_ID" --paths '/*'
+
 jobs:
-  build-and-test:
-    # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
-    # See: https://circleci.com/docs/executor-intro/ & https://circleci.com/docs/configuration-reference/#executor-job
+  build:
+    <<: *defaults
     docker:
-      # Specify the version you desire here
-      # See:https://circleci.com/developer/images/image/cimg/python
-      - image: cimg/python:3.12
-
-    # Add steps to the job
-    # See: https://circleci.com/docs/jobs-steps/#steps-overview & https://circleci.com/docs/configuration-reference/#steps
+      - image: circleci/ruby:2.6.0-node
+    environment:
+      BUNDLE_PATH: ~/repo/vendor/bundle
     steps:
-      # Checkout the code as the first step.
       - checkout
-      - python/install-packages:
-          pkg-manager: pip
-          # app-dir: ~/project/package-directory/  # If your requirements.txt isn't in the root directory.
-          # pip-dependency-file: test-requirements.txt  # if you have a different name for your requirements file, maybe one that combines your runtime and test requirements.
+      - restore_cache:
+          keys:
+            - rubygems-v1-{{ checksum "Gemfile.lock" }}
+            - rubygems-v1-fallback  
       - run:
-          name: Run tests
-          # This assumes pytest is installed via the install-package step above
-          command: pytest
+          name: Bundle Install 
+          command: |
+            echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> $BASH_ENV
+            source $BASH_ENV
+            gem install bundler  
+      - run:
+          name: Bundle Install
+          command: bundle check || bundle install
+      - save_cache:
+          key: rubygems-v1-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+      - run:
+          name: Jekyll build
+          command: JEKYLL_ENV=production bundle exec jekyll build
+      - run:
+          name: Remove .html extension
+          command: find _site/ -type f ! -iname 'index.html' -iname '*.html' -print0 | while read -d $'\0' f; do mv "$f" "${f%.html}"; done
+          permalink: /:categories/:year/:month/:day/:title
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - _site 
+  deploy_staging:
+    <<: *defaults
+    docker:
+      - image: circleci/python:3.6.3
+    environment:
+      S3_BUCKET_NAME: distributedsoup.com-staging
+      CLOUDFRONT_DIST_ID: E3NZBBFWS403NG
+    steps:
+      - attach_workspace:
+          at: ./
+      - *install_awscli
+      - *add_aws_credentials
+      - *deploy_to_s3
+      - *clear_cloudfront_cache 
+  deploy_production:
+    <<: *defaults
+    docker:
+      - image: circleci/python:3.6.3
+    environment:
+      S3_BUCKET_NAME: distributedsoup.com
+      CLOUDFRONT_DIST_ID: E2H0Q1ZFY9OGMJ
+    steps:
+      - attach_workspace:
+          at: ./
+      - *install_awscli
+      - *add_aws_credentials
+      - *deploy_to_s3
+      - *clear_cloudfront_cache
 
-# Orchestrate jobs using workflows
-# See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows
 workflows:
-  sample: # This is the name of the workflow, feel free to change it to better match your workflow.
-    # Inside the workflow, you define the jobs you want to run.
+  version: 2
+  test-deploy:
     jobs:
-      - build-and-test
+      - build
+      - deploy_staging:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
+      - confirm_deploy:
+          type: approval
+          requires:
+            - deploy_staging
+      - deploy_production:
+          requires:
+            - confirm_deploy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
