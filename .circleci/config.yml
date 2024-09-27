@@ -71,30 +71,14 @@ jobs:
           root: ./
           paths:
             - _site 
-  deploy_staging:
-    <<: *defaults
-    docker:
-      - image: circleci/python:3.6
-    environment:
-      S3_BUCKET_NAME: distributedsoup.com-staging
-      CLOUDFRONT_DIST_ID: E3NZBBFWS403NG
-    steps:
-      - attach_workspace:
-          at: ./
-      - run:
-          name: Install CA Certificates (if needed)
-          command: sudo apt-get update && sudo apt-get install -y ca-certificates
-      - *install_awscli
-      - *add_aws_credentials
-      - *deploy_to_s3
-      - *clear_cloudfront_cache 
+
   deploy_production:
     <<: *defaults
     docker:
       - image: circleci/python:3.6
     environment:
       S3_BUCKET_NAME: distributedsoup.com
-      CLOUDFRONT_DIST_ID: E2H0Q1ZFY9OGMJ
+      CLOUDFRONT_DIST_ID: "$CLOUDFRONT_DIST_ID"
     steps:
       - attach_workspace:
           at: ./
