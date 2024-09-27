@@ -74,7 +74,7 @@ jobs:
   deploy_staging:
     <<: *defaults
     docker:
-      - image: circleci/python:3.6.3
+      - image: circleci/python:3.6
     environment:
       S3_BUCKET_NAME: distributedsoup.com-staging
       CLOUDFRONT_DIST_ID: E3NZBBFWS403NG
@@ -91,7 +91,7 @@ jobs:
   deploy_production:
     <<: *defaults
     docker:
-      - image: circleci/python:3.6.3
+      - image: circleci/python:3.6
     environment:
       S3_BUCKET_NAME: distributedsoup.com
       CLOUDFRONT_DIST_ID: E2H0Q1ZFY9OGMJ
