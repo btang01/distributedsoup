@@ -83,7 +83,7 @@ jobs:
       - attach_workspace:
           at: ./
       - run:
-          name: Install CA Certificates (if needed)
+          name: Install CA Certificates (if needed) yes
           command: sudo apt-get update && sudo apt-get install -y ca-certificates
       - *install_awscli
       - *add_aws_credentials
