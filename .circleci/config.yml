@@ -38,7 +38,7 @@ jobs:
   build:
     <<: *defaults
     docker:
-      - image: circleci/ruby:3.0.0-node
+      - image: cimg/ruby:3.0-node
     environment:
       BUNDLE_PATH: ~/repo/vendor/bundle
     steps:
