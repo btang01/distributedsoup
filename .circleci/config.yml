@@ -8,7 +8,8 @@ references:
     run:
       name: Install AWS CLI
       command: |
-        sudo pip install awscli --upgrade
+        sudo pip install --upgrade pip setuptools
+        sudo pip install awscli --upgrade --trusted-host pypi.python.org
   
   add_aws_credentials: &add_aws_credentials
     run:
@@ -80,6 +81,9 @@ jobs:
     steps:
       - attach_workspace:
           at: ./
+      - run:
+          name: Install CA Certificates (if needed)
+          command: sudo apt-get update && sudo apt-get install -y ca-certificates
       - *install_awscli
       - *add_aws_credentials
       - *deploy_to_s3
@@ -94,6 +98,9 @@ jobs:
     steps:
       - attach_workspace:
           at: ./
+      - run:
+          name: Install CA Certificates (if needed)
+          command: sudo apt-get update && sudo apt-get install -y ca-certificates
       - *install_awscli
       - *add_aws_credentials
       - *deploy_to_s3
