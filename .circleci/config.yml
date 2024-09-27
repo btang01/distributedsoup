@@ -95,19 +95,12 @@ workflows:
   test-deploy:
     jobs:
       - build
-      - deploy_staging:
+      - deploy_production:
           requires:
             - build
           filters:
             branches:
               only: master
-      - confirm_deploy:
-          type: approval
-          requires:
-            - deploy_staging
-      - deploy_production:
-          requires:
-            - confirm_deploy
 
 
 
