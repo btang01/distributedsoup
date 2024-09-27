@@ -87,9 +87,6 @@ jobs:
           command: sudo apt-get update && sudo apt-get install -y ca-certificates
       - *install_awscli
       - *add_aws_credentials
-      - run:
-          name: Debug CLOUDFRONT_DIST_ID
-          command: echo 'CloudFront Distribution ID: $CLOUDFRONT_DIST_ID'
       - *deploy_to_s3
       - *clear_cloudfront_cache
 
