@@ -92,7 +92,7 @@ jobs:
 
 workflows:
   version: 2
-  test-deploy:
+  deploy:
     jobs:
       - build
       - deploy_production:
@@ -101,21 +101,3 @@ workflows:
           filters:
             branches:
               only: master
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
