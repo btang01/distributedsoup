@@ -83,7 +83,7 @@ jobs:
     
     environment:
       S3_BUCKET_NAME: distributedsoup.com
-      CLOUDFRONT_DIST_ID: "$CLOUDFRONT_DIST_ID"
+      
     steps:
       - attach_workspace:
           at: ./
