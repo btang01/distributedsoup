@@ -23,7 +23,7 @@ email: distributedsoup@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   A blog full of cloudy thoughts.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.distributedsoup.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Social Media
 twitter_username: btangboston
@@ -40,8 +40,15 @@ header_pages:
   - portfolio.md
 
 disqus:
-  shortname: my_disqus_shortname
+  shortname: distributedsoup-com
 
+defaults:
+  - scope:
+      path: "" # Applies to all posts and pages
+      type: "posts"
+    values:
+      comments: true
+      
 #google_analytics: SOMETHING_SOMETHING
 
 # Exclude from processing.
