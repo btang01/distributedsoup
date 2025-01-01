@@ -36,5 +36,4 @@ Ideas at the intersection of **technology, strategy**, and **innovation**.
 ---
 
 ## About Me
-Hi, I'm **Brian Tang**, a solutions architect and technologist.  
-[View my full resume →](/resume/)
+Hi, I'm **Brian Tang**, a solutions architect and technologist.

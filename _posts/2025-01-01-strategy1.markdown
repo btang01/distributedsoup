@@ -1,0 +1,53 @@
+---
+layout: post
+title:  "Reflecting on Strategy as a Solutions Architect"
+date:   2025-01-01
+categories: strategy
+---
+
+Since my last post about 4 years ago, the world has changed quite a bit: an AI revolution has taken a grip over the world's collective imagination and the terrible impact of COVID is now viewed (by most) as a quaint speedbump in our rearview, and the average 30-year fixed rate that bottomed at about 3% in 2021 is now closer to 7% today (the debate of the Fed funds rate vs. mortgage rates is actually quite a [complicated topic](https://aswathdamodaran.blogspot.com/2024/09/fed-up-with-fed-talk-central-banks.html)). Despite all these macro-level events, I think a good strategy to help navigate all this craziness as a company or even as an individual still remains very much the same.
+
+Bringing all this back to the focus of this blog (tech and business) - what is strategy? Strategy often gets thrown around loosely and the meaning can get watered down - most of us use strategy as a way to sprinkle "important" dust on an initiative or idea. 
+
+This makes sense though. Who doesn't want their idea to be important, strategic, etc? There are various definitions of strategy and I have a humble view of it that helps me conceptualize it and turn it into something that I can use day-to-day.
+
+2 books stand out as being particularly good at describing strategy and developing a good one: "Good Strategy, Bad Strategy" by Richard Rumelt and "7 Powers: The Foundations of Business Strategy" by Hamilton Helmer. 
+
+I mostly follow Rumelt, who defines a good strategy in 3 parts - it has to **diagnose** a key kernel of a problem, have a **guiding policy** to address this issue and then **coherent actions** that support the execution of the strategy. This is great because it is simple to follow and understand, but also requires critical thinking in defining the problem. Not only that, but by thinking about it in this way, you can think about how an organization might have a strategy and then mirror that to individual business units and then further tie operations and information technology strategy to coordinate lower-level (in no way am I being derogatory - I live here), critical functions.
+
+For example, an ecommerce company predicts that in the next 5 years, becoming a more "green" company will be key to remaining competitive, growing the customer base, and deflecting the costly regulatory penalties that will be coming their way. There is a **diagnosis** that the brand is strong but not recognized as environmentally friendly. At an org-level they may have a **guiding policy** to shift towards becoming more environmentally-friendly lifestyle brand over the next 5 years. Their **coherent actions** might be to:
+1. Diversify into sustainable product categories
+2. Prioritize environmentally responsible sourcing and production
+3. Engage in community outreach and education on sustainability to grow that part of the brand 
+
+You can see how this is a bit more detailed than a lofty vision but still remains understandable at the company/org-level. Additionally, these ideas all tie together cohesively without too much messy overlap (MECE, but you can fight me on this). 
+
+By breaking it down in this simple way, a business unit's (let's say the kitchen and home products group) strategy could be that they **diagnose** that despite the growing demand for sustainable home products, they have limited offerings in this space. Their **guiding policy**, after careful analysis , is to shoot for 15% market share in sustainable home products with a 10% increase in revenue over the next 3 years. Their **coherent actions** would be to:
+1. Create innovative and env-friendly kitchen and bath products
+2. Engage with influencers for promotion and education 
+3. Launch sustainability-based loyalty programs
+
+This brings us down to the ground of the technology group. Sometimes when I'm in the weeds working on automation, building DevOps cultures, or even straight up designing a highly available and scalable architecture, it makes sense to step back to see how this helps in the big picture... with this approach to strategy, I think it helps.
+
+For example, the IT strategy could **diagnose** the current issue as: the current digital platform doesn't convey any sustainability messaging and lacks advanced features that modern eco-conscious consumers care about. Your **guiding policy** as an IT org might be to upgrade the digital platforms to underscore the sustainability commitment and enhance the customer experience with that context. **Coherent actions** to support this policy could be:
+1. Re-invent the e-commerce experiences by showing metrics like scores related to sustainability (i.e. carbon footprint, water saved, etc.), and introducing augmented reality features (that could cut down on physical returns, waste, etc.)
+2. Design a mobile app centered on education, product sustainability, recycling opportunities - to support a closed-loop green business
+3. Focus on instrumenting manufacturing and supply chain operations to further improve demand forecase and reduce waste, and pass these benefits on to the consumers
+
+The world's messy and not perfect, but trying to tie the little actions that you see on the ground to the big picture helps you stay focused working on the highest priority tasks. There are numerous contradictions and complicated relationships you have to navigate to prove that you are on the right course. For example, Aswath Damodaran did quite a bit of analysis on actual benefits and impacts of ESG and you could look at some data and see this as an economically challenging initiative - [The Siren Song of Sustainability](https://aswathdamodaran.blogspot.com/2024/11/the-siren-song-of-sustainability.html){:target="_blank"}.
+
+Helmer supplements this overall definition of strategy with more rigor. His math makes my head spin a bit but makes his logic pretty sound. From my understanding, Helmer defines strategy as **a route to sustaining an advantage in an attractive market** - and to make it easier to remember, he consolidates this to 7 powers. A lot of the topics revolve around competition thinking about your power relative to others, but business is a bit of a war so I can roll with that.
+
+1. **Scale Economies** - how getting bigger gives you more advantage in lower per unit costs, can be a barrier for others
+2. **Network Economies** - how a platform becomes more valuable, powerful as it gets bigger
+3. **Counterpositioning** - how your position against a competitor can be good or bad
+4. **Switching Costs** - how making it difficult to switch to a competitor can be an advantage
+5. **Branding** - how branding leads to increased willingness to pay, protects your 
+6. **Cornered Resources** - how getting access to key resources can box others out
+7. **Process Power** - how operational excellence yields better products and cost profiles, making it difficult to imitate
+
+A lot of this has been mentioned before in Michael Porter's "5 Forces" book, but I think the examples provided and the accompanying calculations all cement these ideas very well. I basically try to frame my thoughts around Rumelt and then try to see if there are any elements from the 7 Powers that could be applicable. For example, if I tackle operations well and secure limited, cost-effective green raw materials, I could be cornering a resource. And as my operations get better and better, I could be pushing my advantage - by the time regulatory penalties kick in (probably one of the major economic factors for going green), I would be way ahead of the competition. 
+
+As a Solutions Architect, a technical role, you might wonder how any of this helps. It helps a lot actually. When you work with your account team, a key part of the work (at least at AWS) involves writing an account plan. This plan benefits from understanding strategy - otherwise, you're listing and pursuing an endless number of opportunities and workstreams that may either diverge from what is important to the customer or may not be helpful at all. It's hard to make an impact. Thinking critically about what strategy for your customer could look like helps you connect all the dots and create a narrative that can bring all of this messy, chaotic work together - it helps you and the team better look around the corner and advise the customer. At the very least, it gives you a point of view that you can iteratively refine rather than poking around in the dark.
+
+All of this sounds fluffy so in future posts I'd like to dig into some of the analytical work that I try to conduct to pressure test interesting hypotheses and ideas.
