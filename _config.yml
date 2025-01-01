@@ -38,6 +38,7 @@ plugins:
 
 header_pages:
   - portfolio.md
+  - resume.md
 
 disqus:
   shortname: distributedsoup-com
