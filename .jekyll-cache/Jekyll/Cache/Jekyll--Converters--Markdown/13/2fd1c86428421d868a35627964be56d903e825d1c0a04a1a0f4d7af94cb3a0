@@ -1,0 +1,167 @@
+I"�O<h1 id="introduction"><strong>Introduction</strong></h1>
+<p>Over the past 14 years, I’ve collaborated with at least a dozen multi-billion dollar organizations in a wide array of industries<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>. One recurrent observation I have is that tech project investments can often feel more vibes-driven over being grounded in traditional, rigorous financial analysis.</p>
+
+<p>This post is going to cover why I think it happens, why this is a problem, and offer an approach that tries to account for the idiosyncracies unique to tech and business that might help to bridge that decision-making gap a bit more.</p>
+
+<p>Since this is potentially a controversial topic and I run the risk of upsetting both technical and business-oriented people (maybe even artists as well), I’ll caveat that all the opinions in this blog are my personal observation and don’t reflect the views of my employer. Still interested?</p>
+
+<h1 id="why-vibes-driven-investments-are-common"><strong>Why Vibes-Driven Investments are Common</strong></h1>
+<p>It’s not that I’ve seen zero calculations whatsoever, but I often see broad cuts, estimating total-cost-of-ownership (TCO) with some basic comparisons and a few high-level assumptions that are just understood as having value. For instance, the typical argument for a project would be along the lines of: you will be able to increase revenue by releasing more features faster, be more innovative, and boost customer experience. And you’ll reduce operational costs via better productivity, reduce undifferentiated heavy lifting. Not bad.</p>
+
+<p>I’ve also seen a wide array of tools that can pull extensive data right out of data centers and run some calculations that help you estimate how much you might save by getting out of pricy licenses or right-sizing your compute resources. There are cloud calculators that can incorporate assumptions and nail down estimated costs of each particular service down to thousandths (and beyond) of decimal places.</p>
+
+<p>These are excellent data points and arguments, but miss key elements that can tie the project to an organization’s strategy and help persist the idea of delivering clear value in the long term.</p>
+
+<p>I think there are 3 main reasons for this:</p>
+
+<ol>
+  <li>
+    <p><strong>Complexity and Uncertainty Inherent in Technology:</strong>
+Real-world IT systems and modern applications are extraordinarily complex - it’s almost impossible to precisely model the cost and value of every single existing and future component (since the data usually isn’t collected in an easily consumable way), let alone dial in every risk and benefit, combined with actually executing the project. In fact, 70% of digital transformations fail<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>, and I’ve been around long enough to see what a monumental effort it takes to prevent that failure. The consequences of breezing over execution can be total failure and a leadership overhaul<sup id="fnref:3"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">3</a></sup>. On top of all of this, tech moves fast:  innovation cycles and competitive pressures cause leaders to make decisions under tight time constraints - there is a high risk of being disrupted or counter-positioned so leaders also need to rely on a certain amount of vision and intuition to quickly make a decision. In the time it takes to conduct a thorough due diligence analysis of thousands of workloads, you might miss a market window and the juice (the results of the analysis) may not be worth that squeeze. As an SA, one of the most asked questions I get is: what are other similar customers doing and how is it going? It’s a good question, and an attempt at shortcutting this painful process.</p>
+  </li>
+  <li>
+    <p><strong>Vendor-driven Projects:</strong> A lot of projects I see are based on whichever vendor can show value in a Proof-of-Concept and this is a bit of a roll of the dice since a lot hinges on the vendor’s ability to sell. I think one of the biggest challenges is having a competent vendor. There’s no guarantee of a good execution due to a variety of communication/collaboration, skill-level, market/technology forces, and resource constraints. But I think a good signal would be a partner that makes a good effort to try to lay out all the assumptions and performs thorough analysis. If they fully understand all the value drivers (financial and strategic), they will be better aligned with your company and signals some competence. There is a give-and-take - oftentimes, in enterprise/B2B, the most cost-competitive proposal will win and potential returns are looked at with a skeptical eye. I think there should be more back-and-forth with a realistic lense, a negotiation to arrive at a realistic model and solution. When I spent my career concentrating on a SaaS platform (protecting the innocent, rhymes with Fails-Source), I saw promises that were made in pre-sales that made implementation a nightmare and often I was the third or later wave of revolving door of consultants.</p>
+  </li>
+  <li>
+    <p><strong>Fear of Accountability:</strong> Given the dangers inherent in 1 and 2, vendors live on a knife edge of trying to win the project but try to keep the harder analyses more high level since they will be held accountable for things that are hard to control and hard to measure to begin with. Both vendors and internal teams that have to execute on this try to avoid locking themselves into these financial commitments to minimize finger pointing and failing to deliver on those promises (even if the project is completed).</p>
+  </li>
+</ol>
+
+<p>However, if we decide to reside within this status quo, a major problem is that you even if you finish a project (if you are lucky), it may not tie clearly to a strategy, the gaps in either data collection or processes may not be identified and worked on, your costs may be poorly estimated, and your benefits could be grossly exaggerated. This doesn’t help your organization when you inevitably have to make another tech investment in the future.</p>
+
+<h1 id="the-pure-business-way"><strong>The Pure Business Way</strong></h1>
+<p>In contrast, when a company generally makes an investment, they typically apply some financial tools or metrics to appraise whether or not something is worth pursuing. From buying a soccer team (don’t do this<sup id="fnref:5"><a href="#fn:5" class="footnote" rel="footnote" role="doc-noteref">4</a></sup>), to purchasing a factory or even another company, this is typically what is done. Here’s a crash course from a business standpoint (and across my interactions from developers to managers to directors to VPs to the C-suite, something I’ve surprisingly never seen).</p>
+
+<p>The first basic concepts are using <strong>cost of equity</strong> and <strong>cost of debt</strong> to come up with a <strong>Weighted Average Cost of Capital (WACC)</strong>. What the company needs to return from an investment to satisfy shareholders (those that bought shares of your company) is <strong>cost of equity</strong> and what they need to satisfy debtholders (those who lent you money) is <strong>cost of debt</strong>. The company should use both of those to calculate <strong>WACC</strong> or the hurdle rate, which is the average rate that the company should earn on any new project to figure out if you adding or destroying value. You can factor in taxes to make this even more accurate.</p>
+
+\[WACC = \frac{E}{V} \cdot Re + \frac{D}{V} \cdot Rd \cdot (1 - Tc)\]
+
+<p>Where:</p>
+<ul>
+  <li>( E ): Market value of equity</li>
+  <li>( D ): Market value of debt</li>
+  <li>( V = E + D ): Total value of capital (equity + debt)</li>
+  <li>( Re ): Cost of equity</li>
+  <li>( Rd ): Cost of debt</li>
+  <li>( Tc ): Corporate tax rate</li>
+</ul>
+
+<p>And voilà - in this simple example you have <strong>WACC</strong>, your hurdle rate, or minimum acceptable rate of return. Typically any project that can return more than this WACC percentage number should create value for the company.</p>
+
+<p>WACC will be the basis of your <strong>discount rate</strong> used in calculating the value of your tech investment.</p>
+
+<p>If you are a finance nerd, you might adjust this <strong>discount rate</strong> if the risk is higher (add a risk premium!) or lower (discount this further!), but if you have a standard WACC as the benchmark, you can just use that as a baseline. However, this is just step 1 and one piece of your investment puzzle.</p>
+
+<p>So what about the project itself? To understand the value, you can figure out the expected yearly <strong>cash flows</strong> of the project, then discount them with a <strong>Net Present Value (NPV)</strong> calculation.</p>
+
+<p>To get the <strong>cash flows</strong>, this is where you make a lot of assumptions about how much revenue you would generate (and how) as well as what costs you would reduce. Combine that altogether to estimate the yearly <strong>cash flows</strong> of your project.</p>
+
+<p>You can then apply the <strong>NPV</strong> formula to figure out what all those cash flows are worth in today’s dollars over a period of time. You have to remember to factor in your up-front investment, and if you want to be really specific, bake in growth assumptions during the initial year(s) and the terminal value near the end of the period of your project (if it makes sense to do so).</p>
+
+<p>The Net Present Value (NPV) formula is:</p>
+
+\[NPV = \sum_{t=0}^{n} \frac{C_t}{(1 + r)^t}\]
+
+<p>Where:</p>
+<ul>
+  <li>( C_t ) = Cash flow at time ( t )</li>
+  <li>( r ) = Discount rate</li>
+  <li>( t ) = Time period</li>
+  <li>( n ) = Total number of periods</li>
+</ul>
+
+<p>After you have your NPV formula, you still need to figure out whether or not the <strong>Internal Rate of Return</strong> (aka the <strong>IRR</strong>, the rate that makes the NPV = 0) is greater than or less than the WACC.</p>
+
+<ul>
+  <li>If <strong>IRR &gt; WACC</strong>, then your project beats the company’s average cost of capital so it makes sense to go ahead.</li>
+  <li>If <strong>IRR &lt; WACC</strong>, your project will probably not make sense, unless there is some other intangible strategic goal that you haven’t factored into your calculation.</li>
+</ul>
+
+<p><strong>NPV = 0</strong> just means that you imply that the cash inflow and outflows will be equal. So it’s the project’s intrinsic rate of return.</p>
+
+<p>Clearly there are a lot of assumptions involved, especially due to the complexity/uniqueness of tech projects, so in the next section, I’ll propose a balanced, step-by-step analysis approach.</p>
+
+<p>All of this to say… pure business analyses is not sufficient - if you treat technology projects and teams as widgets, you ignore factors like tech debt, execution risk, and have a glaring hole that can lead to failure, regardless of your model. There’s a great article about the importance of tackling debt<sup id="fnref:4"><a href="#fn:4" class="footnote" rel="footnote" role="doc-noteref">5</a></sup> and how that is worth a post but outside the scope of this current post. And when it comes to just building these financial models, there are a lot of pitfalls you need to avoid and ultimately you still need a narrative that is built on an informed vision and intuition<sup id="fnref:5:1"><a href="#fn:5" class="footnote" rel="footnote" role="doc-noteref">4</a></sup> <sup id="fnref:6"><a href="#fn:6" class="footnote" rel="footnote" role="doc-noteref">6</a></sup></p>
+
+<p>So if the soft tech estimate is not enough and the pure business calculation is too in-the-weeds and can fall apart quickly, what can we do?</p>
+
+<h1 id="blending-business-and-tech-harder-together"><strong>Blending Business and Tech Harder Together</strong></h1>
+<p>Ultimately, the key question we want to answer is: <strong>do I invest or not?</strong> And this is based on the question: <strong>if I invest, what do I expect to return from this investment?</strong></p>
+
+<p>And valuation of this investment is only one part of the equation. You also have to take into account our earlier definition of having a good strategy<sup id="fnref:8"><a href="#fn:8" class="footnote" rel="footnote" role="doc-noteref">7</a></sup>. What problem will this solve for me at an organizational level - and based on competitive dynamics, will this help me in the long run? For instance, how might it reduce my costs, grow my revenue, improve my moat? It’s common for me to see pitches where both the strategy is poorly defined, the costs are too broadly constructed and assumed, and there’s usually very little on the revenue generation side.</p>
+
+<p>Let’s take a simplified case/example of a cloud migration. Should we migrate or not?</p>
+
+<p>A typical pitch might be that you will save costs from licensing and hosting, you will accelerate your development and innovation, improve productivity, etc. While this has been true, how much should you invest? And does it align with your goals? This isn’t just a thought exercise question, but also will help you justify further investment in innovations and operational improvements down the line, something that I have seen organizations struggle with. Not treating tech debt seriously often comes because you are paralyzed by how much to invest in fixing things (seen as low value) versus releasing new features to the point where your operations slows (or as I have seen) grinds to a halt.</p>
+
+<p>Sure, you can shortcut the whole decision-making process and lean on industry analyses like this one from McKinsey that sees 10-15% revenue uplift, achieving 30% faster time-to-market (TTM) from companies that migrate to the cloud (via improving customer experiences and operational agility). But this is only a cursory signal and does not give you a customized look at the benefits that you can use to both inform your short term decision and enable you to adhere to a long term strategy over time.</p>
+
+<p>Here’s a more rigorous approach that helps us align this project with the organization’s strategy</p>
+<ol>
+  <li>Calculate the Net Present Value (NPV) of the project based on the future cash flows discounted to dollars today. Accounting for the time value of money to better understand the</li>
+  <li>Calculate the Payback Period - this will help us understand when we break even from our initial investment and start recouping those costs</li>
+  <li>Determine how the investment will support our strategic goals (gives us a competitive advantage, helps us break into a $10B market in 3 years that we could not enter before, etc.)</li>
+</ol>
+
+<p>We should also take into account the gap between traditional financial investments that are have more predictable cash flows (do I buy this sports franchise or this factory?) vs. fast-moving tech (do I invest in AI solutions, do I migrate to cloud or continue running my tech infrastructure in a rented data center or do I build my own data center)?</p>
+
+<p>Combining business and technology perspectives will help us balance out this key decisions - ignoring these principles on either side leads to low impact projects, cost overruns, missed opportunities.</p>
+
+<h1 id="case-study-example-should-i-migrate-to-the-cloud-or-not"><strong>Case Study Example: Should I Migrate to the Cloud or Not?</strong></h1>
+<p>Suppose that AnyCompany, an online marketplace is considering whether or not a to go ahead wit a cloud migration.</p>
+
+<p>They would need to understand their current state. Their on-premises data center may cost $500,000 per year in energy, maintenance, staffing. And they do a hardware refresh of about $1M every 5 years or so.</p>
+
+<p>You can use both bottom-up estimation and top-down estimation to check if you are directionally correct.</p>
+
+<p>From bottom up, you try to break down cost of database workloads, applicaiton hosting costs, etc.</p>
+
+<p>From top-down, you might double check your bottom estimations with industry benchmarks as a sanity check.</p>
+
+<p>Use the data that you have to determine the value of the project. Understand the cash flows from the project by using the savings between on-premises cost and the annual cloud cost. Factor in initial costs of the project for year 0. Then you have to assume growth in the near term and long-term (or terminal). For example, your cloud cost might initially grow 10% annually due to more workloads. Savings may grow 5% annually due to better efficiency and reduced overhead when working with the cloud.</p>
+
+<p>Then long term, you might have a terminal value that assumes perpetual growth at 2% at the end of say 10 years.</p>
+
+<p>You have to have a discount rate, so you might use a cost of capital value of 8%</p>
+
+<p>As part of this exercise, you’ll likely identify areas where you do not have the data, but then this is time to get those processes and tools in place.</p>
+
+<h1 id="closing-thoughts-remix-vibes-and-financials"><strong>Closing Thoughts: Remix Vibes and Financials</strong></h1>
+<p>Customers struggle with performing their own exhaustive modeling (IRR, NPV, ROI) in-house because it takes a lot of effort, time, requires deep-expertise, and might still fall short of the accuracy that they want, versus taking a quick cut at some estimates, looking at the benchmarks and then just “doing the thing”.</p>
+
+<p>I think a good approach is to blend a bit of your experience and intuition, take a stab at creating a financial model so you at least know where your gaps are for things you need to measure. A good partner should be collaborating with the customer and working together in good faith to achieve these outcomes and measure success.</p>
+
+<p>This middle ground can try to determine 80/20 rule by tackling 2-3 major cost items, estimate some key revenue drivers, and putting them on a shorter time horizon of 3-5 years with a simpler discount rate to give you an order of magnitude feel and try to track against this.</p>
+
+<p>https://www.linkedin.com/pulse/npv-doesnt-work-risky-high-potential-projects-heres-better-mcgrath/
+https://www.investopedia.com/ask/answers/06/npvdisadvantages.asp
+https://er.educause.edu/blogs/2016/7/reexamining-the-role-of-npv-in-it-investment-decisions-a-framework-for-analysis
+https://er.educause.edu/articles/2015/1/it-infrastructure-projects-a-framework-for-analysis
+https://library.educause.edu/-/media/files/library/2014/7/erb1408-pdf.pdf</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1">
+      <p>If you really want to know: automotive, industrial manufacturing, e-commerce, consumer electronics, aviation, state entities, non-profits, education, healthcare (admittedly, some of these industries overlap). <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p><a href="https://www.mckinsey.com/capabilities/transformation/our-insights/why-do-most-transformations-fail-a-conversation-with-harry-robinson" target="_blank">Why do most transformations fail?</a> <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>https://www.bloomberg.com/news/articles/2025-01-13/sonos-ceo-patrick-spence-leaving-after-failed-app-revamp-led-to-customer-revolt <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:5">
+      <p>https://aswathdamodaran.blogspot.com/2015/02/dcf-myth-1-if-you-have-ddiscount-rate.html <a href="#fnref:5" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:5:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:4">
+      <p>https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/breaking-technical-debts-vicious-cycle-to-modernize-your-business <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:6">
+      <p>https://aswathdamodaran.blogspot.com/2015/08/dcf-myth-2-dcf-is-exercise-in-modeling.html <a href="#fnref:6" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:8">
+      <p>https://www.youtube.com/watch?v=s7N-xXGgdE4 <a href="#fnref:8" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+:ET
