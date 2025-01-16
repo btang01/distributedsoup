@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Vibes vs. Numbers in Tech Investments"
-date:   2025-01-09
+date:   2025-01-16
 categories: strategy, technology
 ---
 
