@@ -28,6 +28,7 @@ url: "https://www.distributedsoup.com" # the base hostname & protocol for your s
 # Social Media
 twitter_username: btangboston
 github_username:  btang01
+youtube_username: '@soupereffective'
 
 # Build settings
 theme: minima
