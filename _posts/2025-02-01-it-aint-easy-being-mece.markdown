@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Vibes vs. Numbers in Tech Investments"
+title:  "It Ain't Easy, Being MECE"
 date:   2025-01-16
-categories: strategy, technology
+categories: consulting technology sales
 ---
 
 
@@ -34,7 +34,7 @@ Deciding to live with these reasons and accepting this ambiguity means that your
 ## **Financial Modeling Basics**
 In contrast, when a company generally makes an investment, they apply some financial tools or metrics to appraise whether or not something is worth pursuing. From buying a soccer team (don't do this[^4]), to purchasing a factory or acquiring another company, this is typically what is done. Here's a crash course from a business standpoint (and across my interactions from developers to managers to directors to VPs to the C-suite, something I've surprisingly never seen). Could be that I'm too low on the totem pole though.
 
-The first basic concepts are using **cost of equity** and **cost of debt** to come up with a **Weighted Average Cost of Capital (WACC)**. What the company needs to return from an investment to satisfy shareholders (those that bought shares of your company) is **cost of equity** and what they need to satisfy debtholders (those who lent you money) is **cost of debt**. The company should use both of those to calculate **WACC** or the hurdle rate, which is the average rate that the company should earn on any new project to figure out if you adding or destroying value. You can factor in taxes to make this even more accurate.
+The first basic concepts are using **cost of equity** and **cost of debt** to come up with a **Weighted Average Cost of Capital (WACC)**. What the company needs to return from an investment to satisfy shareholders (those that bought shares of your company) is **cost of equity** and what they need to satisfy debtholders (those who lent you money) is **cost of debt**. The company should use both of those to calculate **WACC** or the hurdle rate, which is the average rate that the company should earn on any new project to figure out if you are adding or destroying value. You can factor in taxes to make this even more accurate.
 
 $$
 WACC = \frac{E}{V} \cdot Re + \frac{D}{V} \cdot Rd \cdot (1 - Tc)
@@ -108,7 +108,7 @@ The key principles are to:
 2. **Measure leading indicators of success** - non-financial metrics as proxy to show that value: this could be adoption rates, increased customer retention, reduced churn, higher Net Promoter Scores (NPS) or Customer Satisfaction Scores (CSAT) that can be tied to the project, etc.
 3. **Prioritize investments that allow you to adapt** - aim solutions that allow you scale and pivot
 
-After the pilot phase, you should be in a better place to take a stab at the cash flow projections. Although leaning on EV is great for flexibility, I still think the rigor of NPV analysis can be effectively combined with this approach to effectively validate a project's long term potential and to  create a data-backed narrative to hold it all together. You can continue to scale incrementally to minimize risks, creating insights along the way to validate your approach. And I think the only way you can consider your potential options over time as you scale up is to model what you know, so you need this foundation and data collection process.
+After the pilot phase, you should be in a better place to take a stab at the cash flow projections. Although leaning on EV is great for flexibility, I still think the rigor of NPV analysis can be effectively combined with this approach to validate a project's long term potential and to  create a data-backed narrative to hold it all together. You can continue to scale incrementally to minimize risks, creating insights along the way to validate your approach. And I think the only way you can consider your potential options over time as you scale up is to model what you know, so you need this foundation and data collection process.
 
 # **Example: Applying Real Options Thinking to a Cloud Migration**
 Bringing these complex ideas in a simple example helps, so suppose your company is thinking about migrating to the cloud.
@@ -164,7 +164,7 @@ For truly big acquisitions (valued in the billions), companies will bring in a t
 
 I believe that there is a sweet spot that exists where you can combine strategic thinking, financial rigor and flexibility through real options thinking. If you start with pilots, track carefully designed metrics, and iterate based on information and insights you pick up along the way, you can set up a roadmap towards sustainable success. For additional information, there's a great resource on Educause that goes through a similar framework in great detail[^15].
 
-What are you experiences with tech investments? Do you rely more on intuition, financial models or mix both?
+What are your experiences with tech investments? Do you rely more on intuition, financial models or mix both?
 
 [^1]: *If you really want to know: automotive, industrial manufacturing, e-commerce, consumer electronics, aviation, state entities, non-profits, education, healthcare (admittedly, some of these industries overlap)*
 [^2]: [McKinsey: Why do most transformations fail?](https://www.mckinsey.com/capabilities/transformation/our-insights/why-do-most-transformations-fail-a-conversation-with-harry-robinson){:target="_blank"}
