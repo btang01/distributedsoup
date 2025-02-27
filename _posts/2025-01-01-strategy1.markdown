@@ -40,9 +40,9 @@ Helmer supplements this overall definition of strategy with more rigor. His math
 
 1. **Scale Economies** - how getting bigger gives you more advantage in lower per unit costs, can be a barrier for others
 2. **Network Economies** - how a platform becomes more valuable, powerful as it gets bigger
-3. **Counterpositioning** - how your position against a competitor can be good or bad
+3. **Counterpositioning** - how a new upstart's positioning can be difficult for a defender to respond to
 4. **Switching Costs** - how making it difficult to switch to a competitor can be an advantage
-5. **Branding** - how branding leads to increased willingness to pay, protects your 
+5. **Branding** - how branding leads to increased willingness to pay, protects your established advantage, builds a moat
 6. **Cornered Resources** - how getting access to key resources can box others out
 7. **Process Power** - how operational excellence yields better products and cost profiles, making it difficult to imitate
 
@@ -51,3 +51,5 @@ A lot of this has been mentioned before in Michael Porter's "5 Forces" book, but
 As a Solutions Architect, a technical role, you might wonder how any of this helps. It helps a lot actually. When you work with your account team, a key part of the work (at least at AWS) involves writing an account plan. This plan benefits from understanding strategy - otherwise, you're listing and pursuing an endless number of opportunities and workstreams that may either diverge from what is important to the customer or may not be helpful at all. It's hard to make an impact. Thinking critically about what strategy for your customer could look like helps you connect all the dots and create a narrative that can bring all of this messy, chaotic work together - it helps you and the team better look around the corner and advise the customer. At the very least, it gives you a point of view that you can iteratively refine rather than poking around in the dark.
 
 All of this sounds fluffy so in future posts I'd like to dig into some of the analytical work that I try to conduct to pressure test interesting hypotheses and ideas.
+
+[^3]: [Bloomberg: Nike CEO Turnaround Rests on Unraveling Predecessor Mistakes](https://www.bloomberg.com/news/articles/2024-12-19/nike-shows-improvement-in-new-ceo-s-first-earnings-report){:target="_blank"}
