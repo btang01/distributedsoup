@@ -110,7 +110,7 @@ In both sales and consulting, a brand can act as a sort of borrowed trust. When 
 
 Phil Knight walked the line and built Nike. Elizabeth Holmes and Sam Bankman Fried walked the same line, committed fraud and paid a steep price. In the end, people might not remember the bluff... but they will remember whether or not you delivered results. 
 
-So, think about how branding applies to what you do, or even how you might be building a brand today. Think long term and about the story you have to tell and how you can consistently deliver on that promise, so that in the long term, you can create something amazing. So... just do it, but do it thoughtfully and with purpose.
+So, think about how branding applies to what you do, or even how you might be building a brand today. Think long term and about the story you have to tell and how you can consistently deliver on that promise, so that in the long term, you keep those doors open and can create something amazing. So... just do it, but do it thoughtfully and with purpose.
 
 [^1]: [Shoe Dog - Phil Knight](https://www.amazon.com/Shoe-Dog-Memoir-Creator-Nike-ebook/dp/B0176M1A44){:target="_blank"}
 [^2]: [This Is Not a T-Shirt: A Brand, a Culture, a Community--a Life in Streetwear - Bobby Hundreds](https://www.amazon.com/This-Not-T-Shirt-Community-Streetwear/dp/0374275793){:target="_blank"}
