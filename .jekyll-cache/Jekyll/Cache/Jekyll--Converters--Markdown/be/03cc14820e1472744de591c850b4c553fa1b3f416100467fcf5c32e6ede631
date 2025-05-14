@@ -1,4 +1,4 @@
-I"g<h2 id="introduction"><strong>Introduction</strong></h2>
+I"Wg<h2 id="introduction"><strong>Introduction</strong></h2>
 <p>Over the past 14 years, I’ve collaborated with at least a dozen multi-billion dollar organizations in a wide array of industries<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>. One recurrent theme stands out: tech project investments often feels more vibes-driven than being grounded in rigorous financial analysis.</p>
 
 <p>This post will explore why I think it happens, why this is a problem, and offer an approach that tries to account for the idiosyncracies unique to tech and business - to balance intuition and analytics to drive better decisions.</p>
@@ -60,10 +60,11 @@ Real-world IT systems and modern applications are extraordinarily complex - it�
 
 <p>The basic Net Present Value (NPV) formula is:</p>
 
-\[NPV = \sum_{t=0}^{n} \frac{C_t}{(1 + r)^t}\]
+\[NPV = I_0​ + \sum_{t=0}^{n} \frac{C_t}{(1 + r)^t}\]
 
 <p>Where:</p>
 <ul>
+  <li>( I_0 ) = Initial investment amount at ( t=0 )</li>
   <li>( C_t ) = Cash flow at time ( t )</li>
   <li>( r ) = Discount rate</li>
   <li>( t ) = Time period</li>

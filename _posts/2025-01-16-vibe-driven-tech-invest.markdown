@@ -63,10 +63,11 @@ You can then apply the **NPV** formula to figure out what all those cash flows a
 The basic Net Present Value (NPV) formula is:
 
 $$
-NPV = \sum_{t=0}^{n} \frac{C_t}{(1 + r)^t}
+NPV = I_0​ + \sum_{t=0}^{n} \frac{C_t}{(1 + r)^t}
 $$
 
 Where:
+- \( I_0 \) = Initial investment amount at \( t=0 \)
 - \( C_t \) = Cash flow at time \( t \)
 - \( r \) = Discount rate
 - \( t \) = Time period
