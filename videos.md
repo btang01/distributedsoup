@@ -1,9 +1,8 @@
 ---
-layout: default
+layout: page
 title: Videos
+permalink: /videos.html
 ---
-
-# Videos
 
 <div class="nav-section">YouTube</div>
 

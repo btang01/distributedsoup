@@ -1,9 +1,8 @@
 ---
-layout: default
+layout: page
 title: External Writing
+permalink: /external.html
 ---
-
-# External Writing
 
 <div class="nav-section">AWS Blog</div>
 

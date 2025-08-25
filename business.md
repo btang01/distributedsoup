@@ -1,9 +1,8 @@
 ---
-layout: default
+layout: page
 title: Business & Strategy
+permalink: /business.html
 ---
-
-# Business & Strategy
 
 {% assign business_posts = site.posts | where_exp: "post", "post.categories contains 'strategy' or post.categories contains 'business' or post.categories contains 'economics' or post.categories contains 'branding'" %}
 {% assign business_years = business_posts | group_by_exp: "post", "post.date | date: '%Y'" | reverse %}

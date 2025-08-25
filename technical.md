@@ -1,9 +1,8 @@
 ---
-layout: default
+layout: page
 title: Technical Writing
+permalink: /technical.html
 ---
-
-# Technical
 
 {% assign tech_posts = site.posts | where_exp: "post", "post.categories contains 'technical' or post.categories contains 'tech'" %}
 {% assign tech_years = tech_posts | group_by_exp: "post", "post.date | date: '%Y'" | reverse %}

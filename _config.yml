@@ -33,6 +33,7 @@ youtube_username: '@soupereffective'
 # Build settings
 theme: minima
 show_excerpts: true
+permalink: /:categories/:year/:month/:day/:title.html
 
 plugins:
   - jekyll-feed
@@ -40,6 +41,10 @@ plugins:
 header_pages:
   - portfolio.md
   - resume.md
+  - business.md
+  - technical.md
+  - videos.md
+  - external.md
 
 disqus:
   shortname: distributedsoup-com
