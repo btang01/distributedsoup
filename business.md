@@ -1,15 +1,9 @@
 ---
 layout: default
-title: Home
+title: Business & Strategy
 ---
 
-# Distributed Soup
-
-Ideas at the intersection of **technology, strategy**, and **innovation**.
-
-Hi, I'm **Brian Tang**, a solutions architect at AWS with an MBA from INSEAD. I help enterprise customers build cloud strategies while geeking out over the intersection of technology and business. When I'm not optimizing factory data platforms or presenting to C-suites, I'm thinking about how tech trends shape markets and writing about it here.
-
-<div class="nav-section">Recent Posts</div>
+# Business & Strategy
 
 {% assign business_posts = site.posts | where_exp: "post", "post.categories contains 'strategy' or post.categories contains 'business' or post.categories contains 'economics' or post.categories contains 'branding'" %}
 {% assign business_years = business_posts | group_by_exp: "post", "post.date | date: '%Y'" | reverse %}

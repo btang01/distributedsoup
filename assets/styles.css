@@ -1,77 +1,314 @@
-/* General Layout Spacing */
+/* Zach Holman inspired minimal design */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #2d3748;
+  background: #f7fafc;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation */
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #fff;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 40px;
+}
+
+.site-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a202c;
+  text-decoration: none;
+}
+
+.site-title:hover {
+  color: #3182ce;
+}
+
+.nav-right {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-right a {
+  color: #4a5568;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-right a:hover {
+  color: #3182ce;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  margin-bottom: 60px;
+}
+
+/* Typography Hierarchy:
+   h1: Main page titles (48px) - "Distributed Soup", "Technical", etc.
+   .post-title (in layout): Individual blog post titles (36px) - "Branding", "US vs China"
+   h2: Major sections in blog posts (24px) - "Tariffs: Buying Time", "Nike: Three Little Words"
+   h3: Subsections in blog posts (20px) - smaller content divisions
+   h4: Minor subsections (18px) - if needed
+   .year-label: Year groupings (16px) - "2025", "2024"
+   Navigation sections: (22px) - "Recent Posts", "AWS Blog"
+*/
+
+/* Page titles */
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0 0 30px 0;
+  color: #1a202c;
+  line-height: 1.2;
+}
+
+/* Blog post main sections */
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 40px 0 20px 0;
+  color: #1a202c;
+  line-height: 1.3;
+}
+
+/* Blog post subsections */
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 30px 0 15px 0;
+  color: #2d3748;
+}
+
+/* Minor subsections */
+h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 25px 0 12px 0;
+  color: #4a5568;
+}
+
+p {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+  color: #4a5568;
+}
+
+/* Links */
+a {
+  color: #3182ce;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2c5282;
+  text-decoration: underline;
+}
+
+/* Post listings */
+span {
+  color: #718096;
+  font-size: 14px;
+  display: inline-block;
+  width: 60px;
+  text-align: left;
+}
+
+/* Year labels */
+.year-label {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 30px 0 15px 0;
+}
+
+/* Post grid */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 16px 0 32px 0;
+}
+
+@media (max-width: 768px) {
+  .post-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  /* Header */
-  header {
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 40px;
+}
+
+@media (max-width: 480px) {
+  .post-grid {
+    grid-template-columns: 1fr;
   }
-  
-  header h1 {
-    margin: 0;
-  }
-  
-  header nav ul {
-    padding: 0;
-    margin: 10px 0 0;
-    list-style: none;
-    display: flex;
-    gap: 15px;
-  }
-  
-  header nav ul li {
-    margin: 0;
-  }
-  
-  /* Main Content */
-  main {
-    padding: 20px 40px;
-    margin-bottom: 40px;
-  }
-  
-  .wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Comments Section */
-  .comments {
-    margin-top: 40px;
-    padding: 20px;
-    background-color: #f7f7f7;
-    border-top: 1px solid #ddd;
-  }
-  
-  /* Footer */
-  footer {
-    padding: 20px;
-    text-align: center;
-    background-color: #f8f9fa;
-    border-top: 1px solid #ddd;
-  }
-  
-  footer p {
-    margin: 5px 0;
-  }
-  
-  /* Typography Adjustments */
-  h1, h2 {
-    margin: 20px 0;
-    color: #333;
-  }
-  
-  p {
-    margin: 10px 0;
-  }
+}
+
+/* Individual post boxes */
+.post-box {
+  border: 3px solid #1a202c;
+  border-radius: 4px;
+  padding: 20px;
+  text-decoration: none;
+  color: #1a202c;
+  transition: all 0.2s ease;
+  display: block;
+  background: #fff;
+}
+
+.post-box:hover {
+  border-color: #000;
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 4px 4px 0px #000;
+  color: #000;
+}
+
+.post-date {
+  font-size: 12px;
+  font-weight: 700;
+  color: #4a5568;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.post-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a202c;
+  line-height: 1.3;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Post titles in actual blog posts (layout) */
+.post-header .post-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a202c;
+  line-height: 1.2;
+  margin: 0 0 20px 0;
+}
+
+/* Navigation sections like "Recent Posts", "AWS Blog" */
+.nav-section {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 40px 0 20px 0;
+  color: #1a202c;
+}
+
+.post-box:hover .post-title {
+  color: #000;
+}
+
+/* External links styling */
+.post-box.external .post-title {
+  color: #1a202c;
+}
+
+.post-box.external:hover .post-title {
+  color: #000;
+}
+
+/* Coming soon message */
+.coming-soon {
+  color: #718096;
+  font-style: italic;
+  margin: 20px 0;
+}
+
+/* Clean list styling */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+/* Footer */
+.site-footer {
+  background: #2d3748;
+  color: #e2e8f0;
+  padding: 40px 20px;
+  margin-top: 60px;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-content h3 {
+  color: #fff;
+  margin: 0 0 10px 0;
+  font-size: 24px;
+}
+
+.footer-content p {
+  margin: 0 0 20px 0;
+  color: #a0aec0;
+}
+
+.footer-contact {
+  margin-top: 20px;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.footer-social a {
+  color: #4299e1;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-social a:hover {
+  color: #63b3ed;
+  text-decoration: underline;
+}
+
+.svg-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  fill: currentColor;
+}
+
+.username {
+  color: inherit;
+}
+
+/* Remove minima theme overrides */
+.site-header {
+  display: none;
+}
+
+/* Clean post content */
+.post-content {
+  margin-top: 20px;
+}
   

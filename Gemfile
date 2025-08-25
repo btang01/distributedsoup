@@ -30,3 +30,7 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 
 
 gem "webrick", "~> 1.7"
+gem "base64"  # Ruby 3.4 no longer ships it as default
+gem "csv"     # same story
+gem "logger"  # silences the Ruby 3.5 deprecation warning preemptively
+gem "bigdecimal", "~> 3.2"

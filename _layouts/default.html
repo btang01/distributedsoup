@@ -2,28 +2,55 @@
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
   {%- include head.html -%}
-  <head>
-    <!-- Add MathJax Script Here -->
-    <script type="text/javascript" async
-            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
-  </head>
 
   <body>
-
-    {%- include header.html -%}
-
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
+    <nav class="site-nav">
+      <div class="nav-left">
+        <a href="/" class="site-title">Distributed Soup</a>
       </div>
-
-      <div class="comments">
-        {% include disqus_comments.html %}
+      <div class="nav-right">
+        <a href="/">Home</a>
+        <a href="/business">Business</a>
+        <a href="/technical">Technical</a>
+        <a href="/videos">Videos</a>
+        <a href="/external">External</a>
       </div>
-    </main>
-
-    {%- include footer.html -%}
+    </nav>
+    
+    <div class="wrapper">
+      {{ content }}
+    </div>
+    
+    <footer class="site-footer">
+      <div class="footer-content">
+        <h3>Distributed Soup</h3>
+        <p>A blog full of cloudy thoughts.</p>
+        <div class="footer-contact">
+          <p><strong>Email:</strong> distributedsoup@gmail.com</p>
+          <div class="footer-social">
+            <a href="https://github.com/btang01">
+              <svg class="svg-icon">
+                <use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use>
+              </svg>
+              <span class="username">btang01</span>
+            </a>
+            <a href="https://twitter.com/btangboston">
+              <svg class="svg-icon">
+                <use xlink:href="{{ '/assets/minima-social-icons.svg#twitter' | relative_url }}"></use>
+              </svg>
+              <span class="username">btangboston</span>
+            </a>
+            <a href="https://youtube.com/@soupereffective">
+              <svg class="svg-icon">
+                <use xlink:href="{{ '/assets/minima-social-icons.svg#youtube' | relative_url }}"></use>
+              </svg>
+              <span class="username">@soupereffective</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
     <script id="dsq-count-scr" src="//distributedsoup-com.disqus.com/count.js" async></script>
   </body>
 
