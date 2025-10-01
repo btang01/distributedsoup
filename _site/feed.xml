@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://www.distributedsoup.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.distributedsoup.com/" rel="alternate" type="text/html" /><updated>2025-08-25T18:05:09-04:00</updated><id>https://www.distributedsoup.com/feed.xml</id><title type="html">Distributed Soup</title><subtitle>A blog full of cloudy thoughts.</subtitle><entry><title type="html">US vs. China: Debt, Tariffs and the Race for Economic Dominance</title><link href="https://www.distributedsoup.com/economics/2025/05/11/us-china.html" rel="alternate" type="text/html" title="US vs. China: Debt, Tariffs and the Race for Economic Dominance" /><published>2025-05-11T00:00:00-04:00</published><updated>2025-05-11T00:00:00-04:00</updated><id>https://www.distributedsoup.com/economics/2025/05/11/us-china</id><content type="html" xml:base="https://www.distributedsoup.com/economics/2025/05/11/us-china.html"><![CDATA[<p>If you’ve been following the headlines, you’ll be aware that the US and China appear to be locked in a struggle for global economic dominance. I started thinking more seriously about this after a one-sided debate with my dad (thanks, dad!). He rattled off stats and bold claims about the US and China, and I didn’t really push back because I wasn’t fully caught up on the details. I’m sure this situation is familiar to many readers.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://www.distributedsoup.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.distributedsoup.com/" rel="alternate" type="text/html" /><updated>2025-10-01T11:23:38-04:00</updated><id>https://www.distributedsoup.com/feed.xml</id><title type="html">Distributed Soup</title><subtitle>A blog full of cloudy thoughts.</subtitle><entry><title type="html">US vs. China: Debt, Tariffs and the Race for Economic Dominance</title><link href="https://www.distributedsoup.com/economics/2025/05/11/us-china.html" rel="alternate" type="text/html" title="US vs. China: Debt, Tariffs and the Race for Economic Dominance" /><published>2025-05-11T00:00:00-04:00</published><updated>2025-05-11T00:00:00-04:00</updated><id>https://www.distributedsoup.com/economics/2025/05/11/us-china</id><content type="html" xml:base="https://www.distributedsoup.com/economics/2025/05/11/us-china.html"><![CDATA[<p>If you’ve been following the headlines, you’ll be aware that the US and China appear to be locked in a struggle for global economic dominance. I started thinking more seriously about this after a one-sided debate with my dad (thanks, dad!). He rattled off stats and bold claims about the US and China, and I didn’t really push back because I wasn’t fully caught up on the details. I’m sure this situation is familiar to many readers.</p>
 
 <p>Just to be clear, I’m not trying to take sides, be overly political, or make predictions. I simply wanted to research and share some observations. I think a lot of people feel the same way, confused by the constant headlines and wondering why the US government keeps talking about China while deploying tariffs, sanctions, and subsidies with such messy, reactive execution. I also want to dispel financial nihilism and explore things in more detail to more clearly understand half-truths vs. facts.</p>
 
@@ -269,12 +269,12 @@ Real-world IT systems and modern applications are extraordinarily complex - it�
 
 <p>Where:</p>
 <ul>
-  <li>( E ): Market value of equity</li>
-  <li>( D ): Market value of debt</li>
-  <li>( V = E + D ): Total value of capital (equity + debt)</li>
-  <li>( Re ): Cost of equity</li>
-  <li>( Rd ): Cost of debt</li>
-  <li>( Tc ): Corporate tax rate</li>
+  <li>\( E \): Market value of equity</li>
+  <li>\( D \): Market value of debt</li>
+  <li>\( V = E + D \): Total value of capital (equity + debt)</li>
+  <li>\( Re \): Cost of equity</li>
+  <li>\( Rd \): Cost of debt</li>
+  <li>\( Tc \): Corporate tax rate</li>
 </ul>
 
 <p>And voilà - in this simple example you have <strong>WACC</strong>, your hurdle rate, or minimum acceptable rate of return. Typically any project that can return more than this WACC percentage number should create value for the company.</p>
@@ -295,11 +295,11 @@ Real-world IT systems and modern applications are extraordinarily complex - it�
 
 <p>Where:</p>
 <ul>
-  <li>( I_0 ) = Initial investment amount at ( t=0 )</li>
-  <li>( C_t ) = Cash flow at time ( t )</li>
-  <li>( r ) = Discount rate</li>
-  <li>( t ) = Time period</li>
-  <li>( n ) = Total number of periods</li>
+  <li>\( I_0 \) = Initial investment amount at \( t=0 \)</li>
+  <li>\( C_t \) = Cash flow at time \( t \)</li>
+  <li>\( r \) = Discount rate</li>
+  <li>\( t \) = Time period</li>
+  <li>\( n \) = Total number of periods</li>
 </ul>
 
 <p>After you set up your NPV formula, you still have to figure out if the <strong>Internal Rate of Return</strong> (<strong>IRR</strong>, the rate that makes the NPV = 0) is greater than or less than your <strong>WACC</strong>.</p>

@@ -41,12 +41,12 @@ WACC = \frac{E}{V} \cdot Re + \frac{D}{V} \cdot Rd \cdot (1 - Tc)
 $$
 
 Where:
-- \( E \): Market value of equity  
-- \( D \): Market value of debt  
-- \( V = E + D \): Total value of capital (equity + debt)  
-- \( Re \): Cost of equity  
-- \( Rd \): Cost of debt  
-- \( Tc \): Corporate tax rate
+- \\( E \\): Market value of equity
+- \\( D \\): Market value of debt
+- \\( V = E + D \\): Total value of capital (equity + debt)
+- \\( Re \\): Cost of equity
+- \\( Rd \\): Cost of debt
+- \\( Tc \\): Corporate tax rate
 
 And voilà - in this simple example you have **WACC**, your hurdle rate, or minimum acceptable rate of return. Typically any project that can return more than this WACC percentage number should create value for the company.
 
@@ -67,11 +67,11 @@ NPV = I_0​ + \sum_{t=0}^{n} \frac{C_t}{(1 + r)^t}
 $$
 
 Where:
-- \( I_0 \) = Initial investment amount at \( t=0 \)
-- \( C_t \) = Cash flow at time \( t \)
-- \( r \) = Discount rate
-- \( t \) = Time period
-- \( n \) = Total number of periods
+- \\( I_0 \\) = Initial investment amount at \\( t=0 \\)
+- \\( C_t \\) = Cash flow at time \\( t \\)
+- \\( r \\) = Discount rate
+- \\( t \\) = Time period
+- \\( n \\) = Total number of periods
 
 After you set up your NPV formula, you still have to figure out if the **Internal Rate of Return** (**IRR**, the rate that makes the NPV = 0) is greater than or less than your **WACC**. 
 
