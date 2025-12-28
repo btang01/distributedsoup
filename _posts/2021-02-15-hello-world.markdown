@@ -2,7 +2,7 @@
 layout: post
 title:  "First Post"
 date:   2021-02-15
-categories: initial
+categories: [initial]
 ---
 
 As of Feb 2021, approximately 7 million blog posts are created every day. 1 more blog shouldn't hurt. There are quite a few thoughts floating around in my head, and a blog seems like a good way to organize ideas and share insights. Think of it like a filing cabinet for my brainspace. Likely, all the topics I mention will fall into two buckets:

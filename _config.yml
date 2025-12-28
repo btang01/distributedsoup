@@ -33,7 +33,7 @@ youtube_username: '@soupereffective'
 # Build settings
 theme: minima
 show_excerpts: true
-permalink: /:categories/:year/:month/:day/:title.html
+permalink: /blog/:year/:month/:day/:title.html
 
 plugins:
   - jekyll-feed

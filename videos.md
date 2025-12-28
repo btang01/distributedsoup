@@ -21,4 +21,14 @@ permalink: /videos.html
     <div class="post-date">YouTube</div>
     <div class="post-title">This Month on AWS Consumer Electronics | S1 E3</div>
   </a>
+
+  <a href="https://www.youtube.com/watch?v=R0E0kCYWFmU" class="post-box external" target="_blank">
+    <div class="post-date">YouTube</div>
+    <div class="post-title">This Month on AWS Consumer Electronics | S1 E5</div>
+  </a>
+
+  <a href="https://www.youtube.com/watch?v=UMMM2G3KGSI" class="post-box external" target="_blank">
+    <div class="post-date">YouTube</div>
+    <div class="post-title">This Month on AWS Consumer Electronics | S1 E6</div>
+  </a>
 </div>

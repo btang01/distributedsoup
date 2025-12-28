@@ -1,4 +1,77 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://www.distributedsoup.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.distributedsoup.com/" rel="alternate" type="text/html" /><updated>2025-10-01T11:23:38-04:00</updated><id>https://www.distributedsoup.com/feed.xml</id><title type="html">Distributed Soup</title><subtitle>A blog full of cloudy thoughts.</subtitle><entry><title type="html">US vs. China: Debt, Tariffs and the Race for Economic Dominance</title><link href="https://www.distributedsoup.com/economics/2025/05/11/us-china.html" rel="alternate" type="text/html" title="US vs. China: Debt, Tariffs and the Race for Economic Dominance" /><published>2025-05-11T00:00:00-04:00</published><updated>2025-05-11T00:00:00-04:00</updated><id>https://www.distributedsoup.com/economics/2025/05/11/us-china</id><content type="html" xml:base="https://www.distributedsoup.com/economics/2025/05/11/us-china.html"><![CDATA[<p>If you’ve been following the headlines, you’ll be aware that the US and China appear to be locked in a struggle for global economic dominance. I started thinking more seriously about this after a one-sided debate with my dad (thanks, dad!). He rattled off stats and bold claims about the US and China, and I didn’t really push back because I wasn’t fully caught up on the details. I’m sure this situation is familiar to many readers.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-12-28T14:54:37-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Distributed Soup</title><subtitle>A blog full of cloudy thoughts.</subtitle><entry><title type="html">What Survived Contact with Reality in 2025</title><link href="http://localhost:4000/blog/2025/12/28/contact-with-reality-2025.html" rel="alternate" type="text/html" title="What Survived Contact with Reality in 2025" /><published>2025-12-28T00:00:00-05:00</published><updated>2025-12-28T00:00:00-05:00</updated><id>http://localhost:4000/blog/2025/12/28/contact-with-reality-2025</id><content type="html" xml:base="http://localhost:4000/blog/2025/12/28/contact-with-reality-2025.html"><![CDATA[<p>The past year was a pretty intense reset that forced me to stress-test my belief that advisory credibility can naturally preserve execution sharpness. I paused writing for a while to absorb what part of this actually held up and sit with what changed.</p>
+
+<h2 id="execution-first-abstraction-later">Execution First, Abstraction Later</h2>
+<p>I began my career with a heavy execution bias. Over the past few years in sales engineering, my work shifted closer to advisory conversations. That distance improved my leverage, but I wanted a real test to prove I could still ship the things I was recommending.</p>
+
+<p>When I found an opportunity to perform rapid prototyping work at AWS, I jumped in with small team that moved fast, broke things, and delivered working protoypes. The pace stripped away abstractions quickly. Ideas that sounded clean in decks immediately ran into reality: security constraints, integration debt, unclear ownership, and edge cases that made AI systems behave unpredictably.</p>
+
+<p>Most high-level conversations about AI and systems aren’t bottlenecked by interesting ideas (though shaping the approach is critical), but by unglamorous details required to actually make the systems work reliably.</p>
+
+<p>This work was rewarding, but I also realized high-intensity prototyping, for me, is better as a powerful learning mode than as a place where I can sustain assymetric, long-term impact.</p>
+
+<p>I continued pushing discomfort by taking on more interviewing roles and booting up an AWS Twitch program where I and a small team designed IoT systems at enterprise scale while answering live questions on the fly within our open-ended format.</p>
+
+<h2 id="interviews-gaps-and-a-forcing-function">Interviews, Gaps, and a Forcing Function</h2>
+<p>After that stretch, I entered a long, harrowing and humbling interview process that exposed real gaps but also rebuilt parts of my foundation.</p>
+
+<p>I hadn’t interviewed seriously in over four years and assumed my experience could carry me. That was not the case. I flopped out of the gate, whiffing questions I should have cleanly handled. It was a reminder that I needed to be intentional about how I articulate things, not just understanding them. Interviewing skills can atrophy without deliberate practice.</p>
+
+<p>One prompt was open-ended: <em>build something interesting with AI.</em></p>
+
+<p>I started by building a functional chatbot combining Salesforce and Jira data, deployed via containerized MCP servers. I cut off the prototype once I hit the core use cases, and reasoned how this could be productionized (https://github.com/btang01/mcp-sf-jira).</p>
+
+<p>After that, I slowed down and hand coded agentic loops from scratch to understand how schemas, memory, and control flow actually influence LLM behavior<br />
+(https://github.com/btang01/claude-basics).</p>
+
+<p>In one interview, I stumbled when asked to reason clearly about concurrency: how async systems behave, how work is scheduled, where coordination breaks down. It wasn’t a trick question but it exposed a gap between intuition and explanation. I also stumbled on system design and realized that I needed to reboot my design rigor.</p>
+
+<p>Rather than hand-wave it away, I turned it into a forcing function. I put together a small reference repository (https://github.com/btang01/asyncio-basics) to make concurrency explicit instead of implicit. I walked through patterns end-to-end: sequential execution, task-based concurrency, gather, structured concurrency with TaskGroup (Python 3.11+), futures, and synchronization primitives like locks and semaphores.</p>
+
+<p>Doing this forced me to slow down and answer questions that I’d previously glossed over including what concurrency is, what it looks like, common failure modes and why this matters so much for AI systems. Agents aren’t just interesting because of reasoning or tokens they generate - they run concurrently, share resources, fail independently and require coordination without collapsing into chaos.</p>
+
+<p>In the end, this work mattered more than interviewing. It sharpened how I think about security, orchestration, reliability, and memory. This helped in two ways: I was able to help my customers navigate ambiguity in a new space, and now I know what frameworks like Strands SDK and ADK can effectively abstract versus what they don’t.</p>
+
+<h2 id="moving-on">Moving On</h2>
+<p>When the GCP Customer Engineer role came together, I took a brief pause. I kept things intentionally ambiguous so I could offload knowledge, close loops and leave cleanly. This period reminded of how many people at AWS that I learned from, worked alongside, and genuinely respect.</p>
+
+<p>When a travel window opened up, I had access to unstructured freedom for the first time in years with no destination constraints, timing or pace. Surprisingly, I found out that there’s always a reason not to go anywhere. Weather forecasts always felt bad, plans always felt suboptimal and waiting or even doing a staycation seemed more optimal. It surprised me that unlimited optionality actually created more unexpected friction.</p>
+
+<p>In the end, I stopped optimizing, ignored the forecasts and booked a trip to Southeast Asia anyway. I chose motion over endless evaluation and was really happy with the result. This reminded me how easily freedom can just turn into inertia when every option is open and how progress only happens if you accept imperfect conditions and just choose to do something.</p>
+
+<h2 id="wandering-then-hitting-limits">Wandering, Then Hitting Limits</h2>
+<p>I spent time wandering without much agenda, walking streets and parks in Hanoi, watching daily routines unfold, eating street food, sitting longer than necessary. It wasn’t profound in a cinematic way and it was a reminder that most of life runs without demanding commentary or analysis.</p>
+
+<p>That calm contrasted sharply with what followed. I rode motorcycles through Ha Giang and swam in waterfalls, which is a beautiful, chaotic experience. Being the “older guy” on the backpacking trail, singing karaoke badly, and playing pickup soccer in flip-flops all landed the same way: letting go of optimization and choosing participation instead.</p>
+
+<p>After that I immersed myself in training Muay Thai hard twice a day, pushing myself and re-igniting old mechanics and my love for the sport.</p>
+
+<p>When I came back, I didn’t really rest until a staph infection forced stillness. No lesson there beyond a simple one: limits exist whether or not you acknowledge them.</p>
+
+<p>I’m excited about my new role and tried to hit the ground running, bringing together past experience but also trying to respect a new culture. My working definition of Googliness, for now, is simple: be intellectually honest, rigorous, and collaborative so we can build meaningful outcomes for customers.</p>
+
+<h2 id="what-to-hit-in-2026">What to Hit in 2026</h2>
+<p>There are a few things I want to put into motion next.</p>
+
+<h3 id="agentic-systems-closer-to-reality">Agentic systems closer to reality</h3>
+
+<p>I want to build beyond isolated Docker demos toward Kubernetes-based patterns—fleet-level services, hybrid deployments, and ADK-style frameworks that support long-running, resilient AI workloads without becoming fragile or prohibitively expensive.</p>
+
+<h3 id="tackling-hidden-infrastructure-constraints">Tackling hidden infrastructure constraints</h3>
+
+<p>Many of the customers I work with operate in the physical world. Cloud-only narratives break down when latency, bandwidth, autonomy, and resilience matter. Running intelligence closer to where the business operates forces clearer thinking about tradeoffs. Reality punishes hand-wavy diagrams, and tooling hasn’t fully caught up yet.</p>
+
+<h3 id="finance-as-an-explanatory-layer">Finance as an Explanatory Layer</h3>
+<p>I also want to spend more time writing about finance. Rather than hot takes, lean on first-principles thinking. Balance sheets, equity, leverage, cash flows, and how capital structure shapes which companies get to survive long enough for their ideas to matter. That kind of grounding feels increasingly necessary, especially in cycles dominated by memes, financial nihilism, and simplistic narratives.</p>
+
+<h2 id="why-write">Why Write?</h2>
+<p>I’m writing again because it helps me distinguish productive complexity from unnecessary friction. This blog is a way to finish thoughts instead of carrying them around half-formed. Writing is how I test whether an idea survives contact with reality. If it doesn’t, it probably shouldn’t guide decisions, whether it’s mine or anyone else’s.</p>
+
+<style>
+  ul, ol {
+    margin-left: 1.2em;
+    list-style: initial;
+  }
+</style>]]></content><author><name></name></author><category term="reflection" /><category term="career" /><summary type="html"><![CDATA[The past year was a pretty intense reset that forced me to stress-test my belief that advisory credibility can naturally preserve execution sharpness. I paused writing for a while to absorb what part of this actually held up and sit with what changed.]]></summary></entry><entry><title type="html">US vs. China: Debt, Tariffs and the Race for Economic Dominance</title><link href="http://localhost:4000/blog/2025/05/11/us-china.html" rel="alternate" type="text/html" title="US vs. China: Debt, Tariffs and the Race for Economic Dominance" /><published>2025-05-11T00:00:00-04:00</published><updated>2025-05-11T00:00:00-04:00</updated><id>http://localhost:4000/blog/2025/05/11/us-china</id><content type="html" xml:base="http://localhost:4000/blog/2025/05/11/us-china.html"><![CDATA[<p>If you’ve been following the headlines, you’ll be aware that the US and China appear to be locked in a struggle for global economic dominance. I started thinking more seriously about this after a one-sided debate with my dad (thanks, dad!). He rattled off stats and bold claims about the US and China, and I didn’t really push back because I wasn’t fully caught up on the details. I’m sure this situation is familiar to many readers.</p>
 
 <p>Just to be clear, I’m not trying to take sides, be overly political, or make predictions. I simply wanted to research and share some observations. I think a lot of people feel the same way, confused by the constant headlines and wondering why the US government keeps talking about China while deploying tariffs, sanctions, and subsidies with such messy, reactive execution. I also want to dispel financial nihilism and explore things in more detail to more clearly understand half-truths vs. facts.</p>
 
@@ -104,7 +177,7 @@
 
 <p>The eventual winner may not be the one with the biggest GDP, but the one that best manages its internal contradictions, adapts to shifting global leanings, and maintains resilience in the long term. For now, the U.S. has bought itself time. Whether it can convert that into sustainable advantage is unclear.</p>
 
-<p>I realize that ultimately, a lot of my views are from a Western-centric lens, and limited to what I think and have read. I’d love to hear other thoughts. Do you believe the U.S. can maintain its lead? Will China’s strategy ultimately succeed? Are we headed for a long-term balance of competing powers?</p>]]></content><author><name></name></author><category term="economics" /><summary type="html"><![CDATA[If you’ve been following the headlines, you’ll be aware that the US and China appear to be locked in a struggle for global economic dominance. I started thinking more seriously about this after a one-sided debate with my dad (thanks, dad!). He rattled off stats and bold claims about the US and China, and I didn’t really push back because I wasn’t fully caught up on the details. I’m sure this situation is familiar to many readers.]]></summary></entry><entry><title type="html">Branding</title><link href="https://www.distributedsoup.com/strategy/branding/2025/02/27/power-of-branding.html" rel="alternate" type="text/html" title="Branding" /><published>2025-02-27T00:00:00-05:00</published><updated>2025-02-27T00:00:00-05:00</updated><id>https://www.distributedsoup.com/strategy/branding/2025/02/27/power-of-branding</id><content type="html" xml:base="https://www.distributedsoup.com/strategy/branding/2025/02/27/power-of-branding.html"><![CDATA[<p>To me, branding has always felt like a fuzzy, overhyped concept. Marketers and other consumers obsess over branding, but it’s something I never really cared for. However, two amazing books, that I recently read back-to-back, changed my perspective quite a bit.</p>
+<p>I realize that ultimately, a lot of my views are from a Western-centric lens, and limited to what I think and have read. I’d love to hear other thoughts. Do you believe the U.S. can maintain its lead? Will China’s strategy ultimately succeed? Are we headed for a long-term balance of competing powers?</p>]]></content><author><name></name></author><category term="economics" /><summary type="html"><![CDATA[If you’ve been following the headlines, you’ll be aware that the US and China appear to be locked in a struggle for global economic dominance. I started thinking more seriously about this after a one-sided debate with my dad (thanks, dad!). He rattled off stats and bold claims about the US and China, and I didn’t really push back because I wasn’t fully caught up on the details. I’m sure this situation is familiar to many readers.]]></summary></entry><entry><title type="html">Branding</title><link href="http://localhost:4000/blog/2025/02/27/power-of-branding.html" rel="alternate" type="text/html" title="Branding" /><published>2025-02-27T00:00:00-05:00</published><updated>2025-02-27T00:00:00-05:00</updated><id>http://localhost:4000/blog/2025/02/27/power-of-branding</id><content type="html" xml:base="http://localhost:4000/blog/2025/02/27/power-of-branding.html"><![CDATA[<p>To me, branding has always felt like a fuzzy, overhyped concept. Marketers and other consumers obsess over branding, but it’s something I never really cared for. However, two amazing books, that I recently read back-to-back, changed my perspective quite a bit.</p>
 
 <p>One was <em>Shoe Dog</em>, a memoir by Phil Knight<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>, who tells the story of Nike’s suprisingly scrappy beginnings and the other was a gift from my partner called <em>This Is Not a T-Shirt</em>, by Bobby Hundreds<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>, who recalls how he built The Hundreds from a backyard operation into a streetwear company that made its voice heard, and endures in a challenging market.</p>
 
@@ -229,7 +302,7 @@
       <p><a href="https://www.amazon.com/Cold-Start-Problem-Andrew-Chen/dp/0062969749/ref=sr_1_1?dib=eyJ2IjoiMSJ9.QIC2IHf1mU8SFPqOeB-72_wCEc601oI5uy0UJII4dzPHVM98qvIyYExlgrzEXSHvQbMeIH4sD5mwPm4NZ0WKpeUoO68iNXeFdH3ETbUCmHSjmlW_K4hgdRxAwOOmBgRcDF7L117kuRK0PK2kvUbkG4cEUopIKrvxFxTj0q28LkISX17amG-36EG7bULXtA-ztKb3Po8U2onZuExcnvYfghiqtcxbfAMWeIWpKaZQ_50.XDJjuo1Ags5YRK4W49AyMS7C8R_BMFaBU1IPyWiSAeE&amp;dib_tag=se&amp;hvadid=496337412370&amp;hvdev=c&amp;hvlocphy=9001989&amp;hvnetw=g&amp;hvqmt=e&amp;hvrand=8880861981827279526&amp;hvtargid=kwd-1164758991056&amp;hydadcr=27886_10744793&amp;keywords=the+cold+start+problem&amp;mcid=cf720515ce8c391ea758c44a1beee66a&amp;qid=1740596764&amp;sr=8-1" target="_blank">The Cold Start Problem - Andrew Chen</a> <a href="#fnref:5" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name></name></author><category term="strategy" /><category term="branding" /><summary type="html"><![CDATA[To me, branding has always felt like a fuzzy, overhyped concept. Marketers and other consumers obsess over branding, but it’s something I never really cared for. However, two amazing books, that I recently read back-to-back, changed my perspective quite a bit.]]></summary></entry><entry><title type="html">Vibes vs. Numbers in Tech Investments</title><link href="https://www.distributedsoup.com/strategy/technology/2025/01/16/vibe-driven-tech-invest.html" rel="alternate" type="text/html" title="Vibes vs. Numbers in Tech Investments" /><published>2025-01-16T00:00:00-05:00</published><updated>2025-01-16T00:00:00-05:00</updated><id>https://www.distributedsoup.com/strategy/technology/2025/01/16/vibe-driven-tech-invest</id><content type="html" xml:base="https://www.distributedsoup.com/strategy/technology/2025/01/16/vibe-driven-tech-invest.html"><![CDATA[<h2 id="introduction"><strong>Introduction</strong></h2>
+</div>]]></content><author><name></name></author><category term="strategy" /><category term="branding" /><summary type="html"><![CDATA[To me, branding has always felt like a fuzzy, overhyped concept. Marketers and other consumers obsess over branding, but it’s something I never really cared for. However, two amazing books, that I recently read back-to-back, changed my perspective quite a bit.]]></summary></entry><entry><title type="html">Vibes vs. Numbers in Tech Investments</title><link href="http://localhost:4000/blog/2025/01/16/vibe-driven-tech-invest.html" rel="alternate" type="text/html" title="Vibes vs. Numbers in Tech Investments" /><published>2025-01-16T00:00:00-05:00</published><updated>2025-01-16T00:00:00-05:00</updated><id>http://localhost:4000/blog/2025/01/16/vibe-driven-tech-invest</id><content type="html" xml:base="http://localhost:4000/blog/2025/01/16/vibe-driven-tech-invest.html"><![CDATA[<h2 id="introduction"><strong>Introduction</strong></h2>
 <p>Over the past 14 years, I’ve collaborated with at least a dozen multi-billion dollar organizations in a wide array of industries<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>. One recurrent theme stands out: tech project investments often feels more vibes-driven than being grounded in rigorous financial analysis.</p>
 
 <p>This post will explore why I think it happens, why this is a problem, and offer an approach that tries to account for the idiosyncracies unique to tech and business - to balance intuition and analytics to drive better decisions.</p>
@@ -268,13 +341,14 @@ Real-world IT systems and modern applications are extraordinarily complex - it�
 \[WACC = \frac{E}{V} \cdot Re + \frac{D}{V} \cdot Rd \cdot (1 - Tc)\]
 
 <p>Where:</p>
+
 <ul>
-  <li>\( E \): Market value of equity</li>
-  <li>\( D \): Market value of debt</li>
-  <li>\( V = E + D \): Total value of capital (equity + debt)</li>
-  <li>\( Re \): Cost of equity</li>
-  <li>\( Rd \): Cost of debt</li>
-  <li>\( Tc \): Corporate tax rate</li>
+  <li>\(E\): Market value of equity</li>
+  <li>\(D\): Market value of debt</li>
+  <li>\(V = E + D\): Total value of capital (equity + debt)</li>
+  <li>\(Re\): Cost of equity</li>
+  <li>\(Rd\): Cost of debt</li>
+  <li>\(Tc\): Corporate tax rate</li>
 </ul>
 
 <p>And voilà - in this simple example you have <strong>WACC</strong>, your hurdle rate, or minimum acceptable rate of return. Typically any project that can return more than this WACC percentage number should create value for the company.</p>
@@ -291,15 +365,15 @@ Real-world IT systems and modern applications are extraordinarily complex - it�
 
 <p>The basic Net Present Value (NPV) formula is:</p>
 
-\[NPV = I_0​ + \sum_{t=0}^{n} \frac{C_t}{(1 + r)^t}\]
+\[NPV = I_0 + \sum_{t=0}^{n} \frac{C_t}{(1 + r)^t}\]
 
 <p>Where:</p>
 <ul>
-  <li>\( I_0 \) = Initial investment amount at \( t=0 \)</li>
-  <li>\( C_t \) = Cash flow at time \( t \)</li>
-  <li>\( r \) = Discount rate</li>
-  <li>\( t \) = Time period</li>
-  <li>\( n \) = Total number of periods</li>
+  <li>\(I_0\) = Initial investment amount at \(t=0\)</li>
+  <li>\(C_t\) = Cash flow at time \(t\)</li>
+  <li>\(r\) = Discount rate</li>
+  <li>\(t\) = Time period</li>
+  <li>\(n\) = Total number of periods</li>
 </ul>
 
 <p>After you set up your NPV formula, you still have to figure out if the <strong>Internal Rate of Return</strong> (<strong>IRR</strong>, the rate that makes the NPV = 0) is greater than or less than your <strong>WACC</strong>.</p>
@@ -328,7 +402,7 @@ Real-world IT systems and modern applications are extraordinarily complex - it�
 
 <p>Many pitches fall short of addressing these fundamental questions. The costs are too broadly assumed, revenue gains are glossed over and the ties to strategy are vague. While it’s reasonable to expect that the immediate benefits are hard to measure, I do agree with the sentiment that, ultimately, “if there are no benefits, then the investment is not strategic”.<sup id="fnref:9"><a href="#fn:9" class="footnote" rel="footnote" role="doc-noteref">9</a></sup></p>
 
-<h1 id="the-idea-of-option-value-over-npv"><strong>The Idea of Option Value Over NPV</strong></h1>
+<h2 id="the-idea-of-option-value-over-npv"><strong>The Idea of Option Value Over NPV</strong></h2>
 
 <p>I came across an article by Rita McGrath, a Columbia Business school professor, who advocates for an approach where you focus on <strong>option value</strong><sup id="fnref:10"><a href="#fn:10" class="footnote" rel="footnote" role="doc-noteref">10</a></sup> and flexibility instead of trying to project cash flows too far out in the future right off the bat. She calls out the shortcomings of NPV analysis in tech projects which can be too rigid since it can omit uncertainty and strategic potential.</p>
 
@@ -344,7 +418,7 @@ Real-world IT systems and modern applications are extraordinarily complex - it�
 
 <p>After the pilot phase, you should be in a better place to take a stab at the cash flow projections. Although leaning on EV is great for flexibility, I still think the rigor of NPV analysis can be effectively combined with this approach to validate a project’s long term potential and to  create a data-backed narrative to hold it all together. You can continue to scale incrementally to minimize risks, creating insights along the way to validate your approach. And I think the only way you can consider your potential options over time as you scale up is to model what you know, so you need this foundation and data collection process.</p>
 
-<h1 id="example-applying-real-options-thinking-to-a-cloud-migration"><strong>Example: Applying Real Options Thinking to a Cloud Migration</strong></h1>
+<h2 id="example-applying-real-options-thinking-to-a-cloud-migration"><strong>Example: Applying Real Options Thinking to a Cloud Migration</strong></h2>
 <p>Bringing these complex ideas in a simple example helps, so suppose your company is thinking about migrating to the cloud.</p>
 
 <p>The first step might be to consider a small pilot project - for example, spending $200k to migrate a business critical application to the cloud. You might have to do a bit of bottoms-up estimation to break down cost of database workloads, application hosting costs, etc. to try to estimate value.</p>
@@ -402,6 +476,13 @@ Real-world IT systems and modern applications are extraordinarily complex - it�
 
 <p>What are your experiences with tech investments? Do you rely more on intuition, financial models or mix both?</p>
 
+<style>
+  ul, ol {
+    margin-left: 1.2em;
+    list-style: initial;
+  }
+</style>
+
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:1">
@@ -450,7 +531,7 @@ Real-world IT systems and modern applications are extraordinarily complex - it�
       <p><a href="https://library.educause.edu/-/media/files/library/2014/7/erb1408-pdf.pdf" target="_blank">Educause: IT Infrastructure Projects a Framework for Analysis</a> <a href="#fnref:15" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name></name></author><category term="strategy" /><category term="technology" /><summary type="html"><![CDATA[Introduction Over the past 14 years, I’ve collaborated with at least a dozen multi-billion dollar organizations in a wide array of industries1. One recurrent theme stands out: tech project investments often feels more vibes-driven than being grounded in rigorous financial analysis. If you really want to know: automotive, industrial manufacturing, e-commerce, consumer electronics, aviation, state entities, non-profits, education, healthcare (admittedly, some of these industries overlap) &#8617;]]></summary></entry><entry><title type="html">Reflecting on Strategy as a Solutions Architect</title><link href="https://www.distributedsoup.com/strategy/general/2025/01/01/strategy1.html" rel="alternate" type="text/html" title="Reflecting on Strategy as a Solutions Architect" /><published>2025-01-01T00:00:00-05:00</published><updated>2025-01-01T00:00:00-05:00</updated><id>https://www.distributedsoup.com/strategy/general/2025/01/01/strategy1</id><content type="html" xml:base="https://www.distributedsoup.com/strategy/general/2025/01/01/strategy1.html"><![CDATA[<p>Since my last post about 4 years ago, the world has changed quite a bit: an AI revolution has taken a grip over the world’s collective imagination and the terrible impact of COVID is now viewed (by most) as a quaint speedbump in our rearview, and the average 30-year fixed rate that bottomed at about 3% in 2021 is now closer to 7% today (the debate of the Fed funds rate vs. mortgage rates is actually quite a <a href="https://aswathdamodaran.blogspot.com/2024/09/fed-up-with-fed-talk-central-banks.html">complicated topic</a>). Despite all these macro-level events, I think a good strategy to help navigate all this craziness as a company or even as an individual still remains very much the same.</p>
+</div>]]></content><author><name></name></author><category term="strategy" /><category term="technology" /><summary type="html"><![CDATA[Introduction Over the past 14 years, I’ve collaborated with at least a dozen multi-billion dollar organizations in a wide array of industries1. One recurrent theme stands out: tech project investments often feels more vibes-driven than being grounded in rigorous financial analysis. If you really want to know: automotive, industrial manufacturing, e-commerce, consumer electronics, aviation, state entities, non-profits, education, healthcare (admittedly, some of these industries overlap) &#8617;]]></summary></entry><entry><title type="html">Reflecting on Strategy as a Solutions Architect</title><link href="http://localhost:4000/blog/2025/01/01/strategy1.html" rel="alternate" type="text/html" title="Reflecting on Strategy as a Solutions Architect" /><published>2025-01-01T00:00:00-05:00</published><updated>2025-01-01T00:00:00-05:00</updated><id>http://localhost:4000/blog/2025/01/01/strategy1</id><content type="html" xml:base="http://localhost:4000/blog/2025/01/01/strategy1.html"><![CDATA[<p>Since my last post about 4 years ago, the world has changed quite a bit: an AI revolution has taken a grip over the world’s collective imagination and the terrible impact of COVID is now viewed (by most) as a quaint speedbump in our rearview, and the average 30-year fixed rate that bottomed at about 3% in 2021 is now closer to 7% today (the debate of the Fed funds rate vs. mortgage rates is actually quite a <a href="https://aswathdamodaran.blogspot.com/2024/09/fed-up-with-fed-talk-central-banks.html">complicated topic</a>). Despite all these macro-level events, I think a good strategy to help navigate all this craziness as a company or even as an individual still remains very much the same.</p>
 
 <p>Bringing all this back to the focus of this blog (tech and business) - what is strategy? Strategy often gets thrown around loosely and the meaning can get watered down - most of us use strategy as a way to sprinkle “important” dust on an initiative or idea.</p>
 
@@ -494,7 +575,7 @@ Real-world IT systems and modern applications are extraordinarily complex - it�
   <li><strong>Network Economies</strong> - how a platform becomes more valuable, powerful as it gets bigger</li>
   <li><strong>Counterpositioning</strong> - how your position against a competitor can be good or bad</li>
   <li><strong>Switching Costs</strong> - how making it difficult to switch to a competitor can be an advantage</li>
-  <li><strong>Branding</strong> - how branding leads to increased willingness to pay, protects your</li>
+  <li><strong>Branding</strong> - how branding leads to increased willingness to pay, protects your margins</li>
   <li><strong>Cornered Resources</strong> - how getting access to key resources can box others out</li>
   <li><strong>Process Power</strong> - how operational excellence yields better products and cost profiles, making it difficult to imitate</li>
 </ol>
@@ -503,7 +584,7 @@ Real-world IT systems and modern applications are extraordinarily complex - it�
 
 <p>As a Solutions Architect, a technical role, you might wonder how any of this helps. It helps a lot actually. When you work with your account team, a key part of the work (at least at AWS) involves writing an account plan. This plan benefits from understanding strategy - otherwise, you’re listing and pursuing an endless number of opportunities and workstreams that may either diverge from what is important to the customer or may not be helpful at all. It’s hard to make an impact. Thinking critically about what strategy for your customer could look like helps you connect all the dots and create a narrative that can bring all of this messy, chaotic work together - it helps you and the team better look around the corner and advise the customer. At the very least, it gives you a point of view that you can iteratively refine rather than poking around in the dark.</p>
 
-<p>All of this sounds fluffy so in future posts I’d like to dig into some of the analytical work that I try to conduct to pressure test interesting hypotheses and ideas.</p>]]></content><author><name></name></author><category term="strategy" /><category term="general" /><summary type="html"><![CDATA[Since my last post about 4 years ago, the world has changed quite a bit: an AI revolution has taken a grip over the world’s collective imagination and the terrible impact of COVID is now viewed (by most) as a quaint speedbump in our rearview, and the average 30-year fixed rate that bottomed at about 3% in 2021 is now closer to 7% today (the debate of the Fed funds rate vs. mortgage rates is actually quite a complicated topic). Despite all these macro-level events, I think a good strategy to help navigate all this craziness as a company or even as an individual still remains very much the same.]]></summary></entry><entry><title type="html">First Post</title><link href="https://www.distributedsoup.com/initial/2021/02/15/hello-world.html" rel="alternate" type="text/html" title="First Post" /><published>2021-02-15T00:00:00-05:00</published><updated>2021-02-15T00:00:00-05:00</updated><id>https://www.distributedsoup.com/initial/2021/02/15/hello-world</id><content type="html" xml:base="https://www.distributedsoup.com/initial/2021/02/15/hello-world.html"><![CDATA[<p>As of Feb 2021, approximately 7 million blog posts are created every day. 1 more blog shouldn’t hurt. There are quite a few thoughts floating around in my head, and a blog seems like a good way to organize ideas and share insights. Think of it like a filing cabinet for my brainspace. Likely, all the topics I mention will fall into two buckets:</p>
+<p>All of this sounds fluffy so in future posts I’d like to dig into some of the analytical work that I try to conduct to pressure test interesting hypotheses and ideas.</p>]]></content><author><name></name></author><category term="strategy" /><category term="general" /><summary type="html"><![CDATA[Since my last post about 4 years ago, the world has changed quite a bit: an AI revolution has taken a grip over the world’s collective imagination and the terrible impact of COVID is now viewed (by most) as a quaint speedbump in our rearview, and the average 30-year fixed rate that bottomed at about 3% in 2021 is now closer to 7% today (the debate of the Fed funds rate vs. mortgage rates is actually quite a complicated topic). Despite all these macro-level events, I think a good strategy to help navigate all this craziness as a company or even as an individual still remains very much the same.]]></summary></entry><entry><title type="html">First Post</title><link href="http://localhost:4000/blog/2021/02/15/hello-world.html" rel="alternate" type="text/html" title="First Post" /><published>2021-02-15T00:00:00-05:00</published><updated>2021-02-15T00:00:00-05:00</updated><id>http://localhost:4000/blog/2021/02/15/hello-world</id><content type="html" xml:base="http://localhost:4000/blog/2021/02/15/hello-world.html"><![CDATA[<p>As of Feb 2021, approximately 7 million blog posts are created every day. 1 more blog shouldn’t hurt. There are quite a few thoughts floating around in my head, and a blog seems like a good way to organize ideas and share insights. Think of it like a filing cabinet for my brainspace. Likely, all the topics I mention will fall into two buckets:</p>
 <ol>
   <li>Technology - cloud tech, security, coding, distributed computing, microservices, industry trends (hop on board the hype train)</li>
   <li>Business - productivity, consulting, current events, industry trends</li>

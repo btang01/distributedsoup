@@ -7,11 +7,25 @@ title: Home
 
 Ideas at the intersection of **technology, strategy**, and **innovation**.
 
-Hi, I'm **Brian Tang**, a solutions architect at AWS with an MBA from INSEAD. I help enterprise customers build cloud strategies while geeking out over the intersection of technology and business. When I'm not optimizing factory data platforms or presenting to C-suites, I'm thinking about how tech trends shape markets and writing about it here.
+I'm **Brian Tang**, a current Customer Engineer at Google with an MBA from INSEAD.
+
+I lead architecture and technical decision-making for large-scale cloud and AI systems that must perform under real production constraints. My work spans large-scale data platforms, real-time analytics, and early AI/ML adoption across manufacturing, robotics, and high-tech.
+
+Right now I partner with engineering teams on data modernization and applied AI, taking fuzzy problems and turning them into clear requirements, then shipping systems that hold up under load, failure, and real-world edge cases.
+
+Before Google, I spent ~5 years at AWS as a Senior Solutions Architect where I owned a $40M ARR portfolio. I worked closely with product and engineering teams to modernize legacy stacks, improve reliability, and reduce operational overhead. 
+
+Earlier, I led technical processes and delivery across 20+ engineering and consulting teams at Accenture, Slalom, and IBM, with a focus on building simple, reliable systems aligned to business outcomes.
 
 <div class="nav-section">Recent Posts</div>
 
-{% assign business_posts = site.posts | where_exp: "post", "post.categories contains 'strategy' or post.categories contains 'business' or post.categories contains 'economics' or post.categories contains 'branding'" %}
+{% assign business_posts = site.posts | where_exp: "post",
+  "post.categories contains 'strategy'
+   or post.categories contains 'business'
+   or post.categories contains 'economics'
+   or post.categories contains 'branding'
+   or post.categories contains 'reflection'
+   or post.categories contains 'career'" %}
 {% assign business_years = business_posts | group_by_exp: "post", "post.date | date: '%Y'" | reverse %}
 
 {% for year in business_years %}

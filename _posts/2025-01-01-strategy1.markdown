@@ -2,7 +2,7 @@
 layout: post
 title:  "Reflecting on Strategy as a Solutions Architect"
 date:   2025-01-01
-categories: strategy general
+categories: [strategy, general]
 ---
 
 Since my last post about 4 years ago, the world has changed quite a bit: an AI revolution has taken a grip over the world's collective imagination and the terrible impact of COVID is now viewed (by most) as a quaint speedbump in our rearview, and the average 30-year fixed rate that bottomed at about 3% in 2021 is now closer to 7% today (the debate of the Fed funds rate vs. mortgage rates is actually quite a [complicated topic](https://aswathdamodaran.blogspot.com/2024/09/fed-up-with-fed-talk-central-banks.html)). Despite all these macro-level events, I think a good strategy to help navigate all this craziness as a company or even as an individual still remains very much the same.
@@ -42,7 +42,7 @@ Helmer supplements this overall definition of strategy with more rigor. His math
 2. **Network Economies** - how a platform becomes more valuable, powerful as it gets bigger
 3. **Counterpositioning** - how your position against a competitor can be good or bad
 4. **Switching Costs** - how making it difficult to switch to a competitor can be an advantage
-5. **Branding** - how branding leads to increased willingness to pay, protects your 
+5. **Branding** - how branding leads to increased willingness to pay, protects your margins
 6. **Cornered Resources** - how getting access to key resources can box others out
 7. **Process Power** - how operational excellence yields better products and cost profiles, making it difficult to imitate
 

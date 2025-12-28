@@ -2,7 +2,7 @@
 layout: post
 title:  "Vibes vs. Numbers in Tech Investments"
 date:   2025-01-16
-categories: strategy technology
+categories: [strategy, technology]
 ---
 
 
@@ -41,12 +41,13 @@ WACC = \frac{E}{V} \cdot Re + \frac{D}{V} \cdot Rd \cdot (1 - Tc)
 $$
 
 Where:
-- \\( E \\): Market value of equity
-- \\( D \\): Market value of debt
-- \\( V = E + D \\): Total value of capital (equity + debt)
-- \\( Re \\): Cost of equity
-- \\( Rd \\): Cost of debt
-- \\( Tc \\): Corporate tax rate
+
+- \\(E\\): Market value of equity
+- \\(D\\): Market value of debt
+- \\(V = E + D\\): Total value of capital (equity + debt)
+- \\(Re\\): Cost of equity
+- \\(Rd\\): Cost of debt
+- \\(Tc\\): Corporate tax rate
 
 And voilà - in this simple example you have **WACC**, your hurdle rate, or minimum acceptable rate of return. Typically any project that can return more than this WACC percentage number should create value for the company.
 
@@ -63,15 +64,15 @@ You can then apply the **NPV** formula to figure out what all those cash flows a
 The basic Net Present Value (NPV) formula is:
 
 $$
-NPV = I_0​ + \sum_{t=0}^{n} \frac{C_t}{(1 + r)^t}
+NPV = I_0 + \sum_{t=0}^{n} \frac{C_t}{(1 + r)^t}
 $$
 
 Where:
-- \\( I_0 \\) = Initial investment amount at \\( t=0 \\)
-- \\( C_t \\) = Cash flow at time \\( t \\)
-- \\( r \\) = Discount rate
-- \\( t \\) = Time period
-- \\( n \\) = Total number of periods
+- \\(I_0\\) = Initial investment amount at \\(t=0\\)
+- \\(C_t\\) = Cash flow at time \\(t\\)
+- \\(r\\) = Discount rate
+- \\(t\\) = Time period
+- \\(n\\) = Total number of periods
 
 After you set up your NPV formula, you still have to figure out if the **Internal Rate of Return** (**IRR**, the rate that makes the NPV = 0) is greater than or less than your **WACC**. 
 
@@ -97,7 +98,7 @@ And in addition to just the pure valuation, you also have to take into account w
 
 Many pitches fall short of addressing these fundamental questions. The costs are too broadly assumed, revenue gains are glossed over and the ties to strategy are vague. While it's reasonable to expect that the immediate benefits are hard to measure, I do agree with the sentiment that, ultimately, "if there are no benefits, then the investment is not strategic".[^9]
 
-# **The Idea of Option Value Over NPV**
+## **The Idea of Option Value Over NPV**
 
 I came across an article by Rita McGrath, a Columbia Business school professor, who advocates for an approach where you focus on **option value**[^10] and flexibility instead of trying to project cash flows too far out in the future right off the bat. She calls out the shortcomings of NPV analysis in tech projects which can be too rigid since it can omit uncertainty and strategic potential.
 
@@ -111,7 +112,7 @@ The key principles are to:
 
 After the pilot phase, you should be in a better place to take a stab at the cash flow projections. Although leaning on EV is great for flexibility, I still think the rigor of NPV analysis can be effectively combined with this approach to validate a project's long term potential and to  create a data-backed narrative to hold it all together. You can continue to scale incrementally to minimize risks, creating insights along the way to validate your approach. And I think the only way you can consider your potential options over time as you scale up is to model what you know, so you need this foundation and data collection process.
 
-# **Example: Applying Real Options Thinking to a Cloud Migration**
+## **Example: Applying Real Options Thinking to a Cloud Migration**
 Bringing these complex ideas in a simple example helps, so suppose your company is thinking about migrating to the cloud.
 
 The first step might be to consider a small pilot project - for example, spending $200k to migrate a business critical application to the cloud. You might have to do a bit of bottoms-up estimation to break down cost of database workloads, application hosting costs, etc. to try to estimate value. 
@@ -183,3 +184,9 @@ What are your experiences with tech investments? Do you rely more on intuition, 
 [^14]: [Investopedia: NPV Disadvantages](https://www.investopedia.com/ask/answers/06/npvdisadvantages.asp){:target="_blank"}
 [^15]: [Educause: IT Infrastructure Projects a Framework for Analysis](https://library.educause.edu/-/media/files/library/2014/7/erb1408-pdf.pdf){:target="_blank"}
 
+<style>
+  ul, ol {
+    margin-left: 1.2em;
+    list-style: initial;
+  }
+</style>

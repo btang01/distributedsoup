@@ -2,7 +2,7 @@
 layout: post
 title:  "Branding"
 date:   2025-02-27
-categories: strategy branding
+categories: [strategy, branding]
 ---
 
 To me, branding has always felt like a fuzzy, overhyped concept. Marketers and other consumers obsess over branding, but it's something I never really cared for. However, two amazing books, that I recently read back-to-back, changed my perspective quite a bit.
