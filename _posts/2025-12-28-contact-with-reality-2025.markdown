@@ -39,11 +39,11 @@ Doing this forced me to slow down and answer questions that I'd previously gloss
 In the end, this work mattered more than interviewing. It sharpened how I think about security, orchestration, reliability, and memory. This helped in two ways: I was able to help my customers navigate ambiguity in a new space, and now I know what frameworks like Strands SDK and ADK can effectively abstract versus what they don’t.
 
 ## Moving On
-When the GCP Customer Engineer role came together, I took a brief pause. I kept things intentionally ambiguous so I could offload knowledge, close loops and leave cleanly. This period reminded of how many people at AWS that I learned from, worked alongside, and genuinely respect.
+When the GCP Customer Engineer role came together, I took a brief pause. I kept things intentionally ambiguous so I could offload knowledge, close loops and leave cleanly. This period reminded me of how many people at AWS that I learned from, worked alongside, and genuinely respect.
 
 When a travel window opened up, I had access to unstructured freedom for the first time in years with no destination constraints, timing or pace. Surprisingly, I found out that there’s always a reason not to go anywhere. Weather forecasts always felt bad, plans always felt suboptimal and waiting or even doing a staycation seemed more optimal. It surprised me that unlimited optionality actually created more unexpected friction.
 
-In the end, I stopped optimizing, ignored the forecasts and booked a trip to Southeast Asia anyway. I chose motion over endless evaluation and was really happy with the result. This reminded me how easily freedom can just turn into inertia when every option is open and how progress only happens if you accept imperfect conditions and just choose to do something.
+In the end, I stopped optimizing, ignored the forecasts and booked a trip to Southeast Asia anyway. I chose motion over endless evaluation and was really happy with the result. This illustrated to me how freedom can just turn into inertia when every option is open and how progress only happens if you accept imperfect conditions and just choose to do something.
  
 ## Wandering, Then Hitting Limits
 I spent time wandering without much agenda, walking streets and parks in Hanoi, watching daily routines unfold, eating street food, sitting longer than necessary. It wasn’t profound in a cinematic way and it was a reminder that most of life runs without demanding commentary or analysis.
