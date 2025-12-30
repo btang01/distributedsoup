@@ -26,7 +26,7 @@ Earlier, I led technical processes and delivery across 20+ engineering and consu
    or post.categories contains 'branding'
    or post.categories contains 'reflection'
    or post.categories contains 'career'" %}
-{% assign business_years = business_posts | group_by_exp: "post", "post.date | date: '%Y'" | reverse %}
+{% assign business_years = business_posts | group_by_exp: "post", "post.date | date: '%Y'" %}
 
 {% for year in business_years %}
 <div class="year-label">{{ year.name }}</div>
