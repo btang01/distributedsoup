@@ -2,7 +2,7 @@
 layout: post
 title:  "US vs. China: Debt, Tariffs and the Race for Economic Dominance"
 date:   2025-05-11
-categories: economics
+categories: [economics]
 ---
 
 If you’ve been following the headlines, you'll be aware that the US and China appear to be locked in a struggle for global economic dominance. I started thinking more seriously about this after a one-sided debate with my dad (thanks, dad!). He rattled off stats and bold claims about the US and China, and I didn’t really push back because I wasn’t fully caught up on the details. I'm sure this situation is familiar to many readers.
