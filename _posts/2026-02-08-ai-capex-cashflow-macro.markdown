@@ -7,7 +7,7 @@ categories: [strategy, technology]
 
 Over the last earnings cycle, a familiar pattern emerged across large U.S. technology companies. Earnings beat expectations, revenue growth remained solid, guidance was generally positive, and yet equity market reactions were muted to even downright negative.
 
-The dominant explanation circulating on LinkedIn, YouTube, and earnings recaps is that investors are growing uneasy about the scale and persistence of AI-driven capex. Across a small group of incumbents, annualized investment is now approaching or exceeding **$600B** on a run-rate basis, and markets are questioning whether or not this spending will ultimately earn an adequate return.
+The dominant explanation circulating on LinkedIn, YouTube, and earnings recaps is that investors are growing uneasy about the scale and persistence of AI-driven capex. Across a small group of incumbents, annualized investment is now approaching or exceeding **$600B** on a run-rate basis, and markets are questioning whether or not this spending will earn an adequate return.
 
 I started digging into this because the market reaction, and the explanations people were giving, didn’t sit right with me. It felt like everyone was pointing at “AI capex” in a vague way without actually explaining the mechanism.
 
@@ -31,7 +31,7 @@ Capex rose from roughly **$40B in 2024** to **~$70B in 2025**, with anticipated 
 5. **NVIDIA:**
 NVIDIA stands apart. It benefits directly from this capex wave without bearing it at the same scale. Its customers, hyperscalers, spend while NVIDIA monetizes quickly.
 
-Taken together, these companies are committing **well over half a trillion dollars** in capital to AI-related infrastructure over a short window centered around FY2026. This alone is enough to change how markets think about valuation, even before asking whether this spending ultimately pays off.
+Taken together, these companies are committing **well over half a trillion dollars** in capital to AI-related infrastructure over a short window centered around FY2026. This alone is enough to change how markets think about valuation, even before asking whether this spending eventually pays off.
 
 ## Earnings Great, Valuations Muted - What Gives?
 So we know there is a huge step change in capex, but how did the companies do? In short, across the board, the tech firms delivered strong, double-digit revenue and net income growth. Performance was objectively good, no matter how you slice and dice it (YoY, QoQ, full year, month comparisons, etc). For reference, I highlighted the performance for the big tech firms below. 
@@ -84,7 +84,7 @@ When capex ramps faster than operating cash flow, free cash flow compresses — 
 
 This is the statement valuations care about most, because equity value ultimately discounts future free cash flow, not reported earnings.
 
-Valuation ultimately discounts future free cash flows using a required return (discount rate) which reflects the cost of capital and perceived risk. For a deeper breakdown of WACC and how it's used in investment decisions, see my earlier post: Vibes vs. Numbers in Tech Investments [^1].
+Valuation uses a required return (discount rate) which reflects the cost of capital and perceived risk. For a deeper breakdown of WACC and how it's used in investment decisions, see my earlier post: Vibes vs. Numbers in Tech Investments [^1].
 
 ## Why Re-Rating Doesn't Happen Immediately
 A logical question to ask is: **if capex eventually stabilizes, why not just reprice the companies now and get that stock price way up there?**
