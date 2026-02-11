@@ -9,12 +9,12 @@ Over the last earnings cycle, a familiar pattern emerged across large U.S. techn
 
 The dominant explanation circulating on LinkedIn, YouTube, and earnings recaps is that investors are growing uneasy about the scale and persistence of AI-driven capex. Across a small group of incumbents, annualized investment is now approaching or exceeding **$600B** on a run-rate basis, and markets are questioning whether or not this spending will earn an adequate return.
 
-I started digging into this because the market reaction, and the explanations people were giving, didn’t sit right with me. It felt like everyone was pointing at “AI capex” in a vague way without actually explaining the mechanism.
+I started digging into this because the market reaction, and the explanations people were giving, felt unsatisfying. Everyone was pointing at “AI capex” in a vague way without actually explaining the mechanism.
 
 The way I’ve come to think about it is less about AI “working” or “not working,” and more about timing. Large, front-loaded AI capex pulls cash forward and pushes free cash flow further out, at a moment when cash is expensive and risk capital is picky. In that setup, earnings beats still matter, but they don’t force a re-rating. Markets seem to be waiting for the cash to arrive.
 
 ## Capital Expenditure: Evidence of a Step-Change
-The current AI buildout represents a huge step-change in capital intensity across a small set of firms. To anchor the discussion, consider the scale:
+The current AI buildout represents a huge step-change in capital intensity across a small set of firms. This surge has very few, but powerful historical parallels: the railway boom in the 19th century, the US highway interstate construction in the mid-20th century, and the industrial revolution - all of these transformed how we think about productivity. To anchor the discussion, consider the scale:
 
 1. **Amazon.com, Inc.:**
 Capex accelerated sharply through FY2024–FY2025, with management signaling an annualized investment run-rate approaching **$200B in FY2026**, driven by data centers, custom silicon, logistics automation, and AI infrastructure.
