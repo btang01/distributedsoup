@@ -25,6 +25,7 @@ Earlier, I led technical processes and delivery across 20+ engineering and consu
    or post.categories contains 'economics'
    or post.categories contains 'branding'
    or post.categories contains 'reflection'
+   or post.categories contains 'tech'
    or post.categories contains 'career'" %}
 {% assign business_years = business_posts | group_by_exp: "post", "post.date | date: '%Y'" %}
 
